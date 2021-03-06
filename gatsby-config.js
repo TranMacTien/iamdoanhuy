@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `I a m d o a n h u y`,
+    description: `Yeu Du Thu, Thich Design`,
+    author: `tientranmac96`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -29,6 +29,30 @@ module.exports = {
       },
     },
     `gatsby-plugin-gatsby-cloud`,
+    {
+      resolve: 'gatsby-alias-imports',
+      options: {
+        aliases: {
+          assets: `src/assets`,
+          constants: `src/constants`,
+          components: `src/components`,
+          helpers: `src/helpers`,
+          hooks: `src/hooks`,
+          images: `src/images`,
+          scss: `src/scss`,
+          state: `src/state`,
+          services: `src/services`,
+          utils: `src/utils`,
+        }
+      }
+    },
+    'gatsby-plugin-remove-trailing-slashes',
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        // Add any options here
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
