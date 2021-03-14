@@ -8,9 +8,9 @@
 import React from "react"
 import PropTypes from "prop-types"
 import "normalize.css"
-import "@fontsource/ibm-plex-mono"
 
 import { GlobalStyled } from "./GlobalStyled"
+import {Helmet} from 'react-helmet'
 // import { useStaticQuery, graphql } from "gatsby"
 
 import { Header, Footer } from "components"
@@ -27,6 +27,11 @@ const Layout = ({ children }) => {
   `) */
 
   return (
+    <>
+    <Helmet>
+      <link rel="preconnect" href="https://fonts.gstatic.com" />
+      <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
+    </Helmet>
     <div style={{ position: "relative" }}>
       <GlobalStyled />
       <Header />
@@ -35,6 +40,7 @@ const Layout = ({ children }) => {
       </div>
       <Footer />
     </div>
+    </>
   )
 }
 

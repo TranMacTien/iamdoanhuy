@@ -1,13 +1,17 @@
 import React from "react"
 import { Link } from "gatsby"
 
+import LogoImage from 'images/logo.svg'
+
 import { StyledContainer, StyledLogoContainer, StyledMenuContainer } from "./Header.styled"
 
 function Header(props) {
   return (
     <StyledContainer>
       <StyledLogoContainer>
-        <img src="https://cdn.logo.com/hotlink-ok/logo-social-sq.png" alt="" />
+        <Link to="/">
+          <img src={LogoImage} alt="I am Doan Huy" />
+        </Link>
       </StyledLogoContainer>
 
       <StyledMenuContainer>
@@ -16,13 +20,13 @@ function Header(props) {
             <Link to="/portfolio">PORTFOLIO</Link>
           </li>
           <li>
-            <Link to="/khoa-hoc">KHOA HOC</Link>
+            <Link to="/khoa-hoc">KHOÁ HỌC</Link>
           </li>
           <li>
-            <Link to="/tai-lieu-mien-phi">TAI LIEU MIEN PHI</Link>
+            <Link to="/tai-lieu-mien-phi">TÀI LIỆU MIỄN PHÍ</Link>
           </li>
           <li>
-            <Link to="/lien-he">LIEN HE</Link>
+            <Link to="/lien-he">LIÊN HỆ</Link>
           </li>
         </ul>
       </StyledMenuContainer>

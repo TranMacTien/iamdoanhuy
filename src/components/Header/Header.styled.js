@@ -9,7 +9,7 @@ export const StyledContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   z-index: 2;
-  padding: 0 4vw;
+  padding: 24px 6vw 0;
 `
 
 export const StyledLogoContainer = styled.div`
@@ -29,7 +29,7 @@ export const StyledMenuContainer = styled.div`
   }
 
   li:not(:last-child) {
-    padding-right: 50px;
+    padding-right: 100px;
   }
 
   a {

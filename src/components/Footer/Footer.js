@@ -1,33 +1,63 @@
 import React from "react"
 
-import { StyledContainer } from "./Footer.styled"
+import Logo from "images/logo-2.svg"
+import LogoYoutube from "images/logo-youtube.svg"
+import LogoFacebook from "images/logo-facebook.svg"
+import LogoTiktok from "images/logo-tiktok.svg"
+import {
+  StyledContainer,
+  StyledSectionBottom,
+  StyledSectionBottomItem,
+  StyledSectionTop,
+  StyledSocialList,
+} from "./Footer.styled"
 
 function Footer(props) {
-  return <StyledContainer>
-    <div>
-      <div><img src="" alt=""/></div>
+  return (
+    <StyledContainer>
+      <StyledSectionTop>
+        <div>
+          <img src={Logo} alt="I AM DOAN HUY" />
+        </div>
+        <div>
+          <StyledSocialList>
+            <li>
+              <a href="">
+                <img src={LogoYoutube} alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src={LogoFacebook} alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src={LogoTiktok} alt="" />
+              </a>
+            </li>
+          </StyledSocialList>
+        </div>
+      </StyledSectionTop>
       <div>
-        <ul>
-          <li><a href="">Youtube</a></li>
-          <li><a href="">Facebook</a></li>
-          <li><a href="">Tiktok</a></li>
-        </ul>
+        <StyledSectionBottom>
+          <StyledSectionBottomItem>
+            <a href="mailto: huydoan9825@gmail.com">
+              Email: huydoan9825@gmail.com
+            </a>
+          </StyledSectionBottomItem>
+          <StyledSectionBottomItem>
+            <a href="tel: 0968573574">Số điện thoại: 0968.573.574</a>
+          </StyledSectionBottomItem>
+          <StyledSectionBottomItem>
+            <a href="https://www.facebook.com/iamdoanhuy" target="_blank">
+              Facebook: https://www.facebook.com/iamdoanhuy
+            </a>
+          </StyledSectionBottomItem>
+        </StyledSectionBottom>
       </div>
-    </div>
-    <div>
-      <ul>
-        <li>
-          <a href="">Email: huydoan9825@gmail.com</a>
-        </li>
-        <li>
-          <a href="">Số điện thoại: 0968 573 574</a>
-        </li>
-        <li>
-          <a href="">Facebook: https://www.facebook.com/iamdoanhuy</a>
-        </li>
-      </ul>
-    </div>
-  </StyledContainer>
+    </StyledContainer>
+  )
 }
 
 export default Footer
