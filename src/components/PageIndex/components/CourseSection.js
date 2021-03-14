@@ -34,4 +34,4 @@ function CourseSection(props) {
   )
 }
 
-export default CourseSection
+export default CourseSection;
