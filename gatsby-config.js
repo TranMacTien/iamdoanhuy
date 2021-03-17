@@ -34,7 +34,7 @@ module.exports = {
       options: {
         aliases: {
           assets: `src/assets`,
-          constants: `src/constants`,
+          '@constants': `src/constants`,
           components: `src/components`,
           helpers: `src/helpers`,
           hooks: `src/hooks`,

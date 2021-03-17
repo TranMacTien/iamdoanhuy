@@ -1,4 +1,4 @@
-import { Colors } from "constants"
+import { Colors } from "@constants"
 import styled from "styled-components"
 
 export const StyledIntroContainer = styled.section`

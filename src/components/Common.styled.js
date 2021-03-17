@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { Colors } from "constants"
+import { Colors } from "@constants"
 
 export const SectionTitle = styled.h2`
   margin: 0 0 ${props => props.marginBottom || 0} 0;
