@@ -14,7 +14,7 @@ export const StyledContainer = styled.div`
 
 export const StyledLogoContainer = styled.div`
   img {
-    width: 74px;
+    width: 160px;
   }
 `
 
@@ -29,12 +29,13 @@ export const StyledMenuContainer = styled.div`
   }
 
   li:not(:last-child) {
-    padding-right: 100px;
+    padding-right: 66px;
   }
 
   a {
     display: block;
     color: white;
     text-decoration: none;
+    font-size: 16px;
   }
 `

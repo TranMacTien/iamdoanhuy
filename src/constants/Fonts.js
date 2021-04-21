@@ -1,3 +1,4 @@
 export const Fonts = {
-  Primary: "IBM Plex Mono, Arial, sans-serif",
+  Primary: "Open Sans, Arial, sans-serif",
+  Secondary: "Montserrat, Arial, sans-serif",
 }
