@@ -14,7 +14,7 @@ function HomeBlockSecondary({
   imageWidth,
 }) {
   return (
-    <Parallax bgImage={background} strength={400}>
+    <Parallax bgImage={background} strength={600}>
       <Styled.HomeBlockSecondaryContainer>
         <Styled.HomeBlockLeft type={type}>
           <Styled.HomeBlockSecondaryImage
