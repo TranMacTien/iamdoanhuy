@@ -1,4 +1,4 @@
-import { Fonts } from "constants"
+import { Fonts } from "@constants"
 import styled from "styled-components"
 
 export const StyledContainer = styled.div`

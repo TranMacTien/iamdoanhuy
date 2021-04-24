@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { Fonts } from "constants"
+import { Fonts } from "@constants"
 
 export const Container = styled.footer`
   padding: 50px calc((100vw - 1200px) / 2);
