@@ -1,3 +1,4 @@
+import { Fonts } from "constants"
 import styled from "styled-components"
 
 export const StyledContainer = styled.div`
@@ -26,10 +27,7 @@ export const StyledMenuContainer = styled.div`
     list-style: none;
     margin: 0;
     padding: 0;
-  }
-
-  li:not(:last-child) {
-    padding-right: 66px;
+    column-gap: 48px;
   }
 
   a {
@@ -37,5 +35,11 @@ export const StyledMenuContainer = styled.div`
     color: white;
     text-decoration: none;
     font-size: 16px;
+    font-weight: 500;
+    font-family: ${Fonts.Secondary};
+    position: relative;
+    &.active {
+
+    }
   }
 `

@@ -16,4 +16,7 @@ export const GlobalStyled = createGlobalStyle`
     font-weight: 400;
     background: black;
   }
+  .react-parallax-bgimage {
+    will-change: transform;
+  }
 `

@@ -17,25 +17,25 @@ function Header(props) {
       <StyledMenuContainer>
         <ul>
           <li>
-            <Link to="/">Trang chu</Link>
+            <Link activeClassName="active" to="/">Trang chủ</Link>
           </li>
           <li>
-            <Link to="/khoa-hoc">Khoa hoc</Link>
+            <Link activeClassName="active" to="/khoa-hoc-offline">Khoá học Offline</Link>
           </li>
           <li>
-            <Link to="/artwork">Artwork</Link>
+            <Link activeClassName="active" to="/khoa-hoc-online">Khoá học online</Link>
           </li>
           <li>
-            <Link to="/video">Video</Link>
+            <Link activeClassName="active" to="/artwork">Artwork</Link>
           </li>
           <li>
-            <Link to="/blog">Blog</Link>
+            <Link activeClassName="active" to="/blog">Blog</Link>
           </li>
           <li>
-            <Link to="/tai-mien-phi">Tai mien phi</Link>
+            <Link activeClassName="active" to="/tai-mien-phi">Tải miễn phí</Link>
           </li>
           <li>
-            <Link to="/lien-he">Lien he</Link>
+            <Link activeClassName="active" to="/lien-he">About</Link>
           </li>
         </ul>
       </StyledMenuContainer>

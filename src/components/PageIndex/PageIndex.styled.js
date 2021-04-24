@@ -1,11 +1,10 @@
 import styled, { css } from "styled-components"
 
 import { ButtonBase } from "components/Common.styled"
-import { Colors, Fonts } from "constants"
+import { Fonts } from "constants"
 import ImageHome from "images/home.jpeg"
 
 export const IntroContainer = styled.section`
-  background: url(${ImageHome}) center/cover no-repeat;
   min-height: 100vh;
   display: flex;
   flex-direction: column;

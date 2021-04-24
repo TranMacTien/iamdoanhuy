@@ -1,4 +1,5 @@
 import React from "react"
+import { Parallax } from "react-parallax";
 
 import * as Styled from "../PageIndex.styled"
 
@@ -13,27 +14,29 @@ function HomeBlockSecondary({
   imageWidth,
 }) {
   return (
-    <Styled.HomeBlockSecondaryContainer background={background}>
-      <Styled.HomeBlockLeft type={type}>
-        <Styled.HomeBlockSecondaryImage
-          src={image}
-          alt=""
-          imageWidth={imageWidth}
-        />
-      </Styled.HomeBlockLeft>
-      <Styled.HomeBlockRight>
-        <Styled.HomeBlockSecondaryContent type={type}>
-          <Styled.HomeBlockSecondaryTitle type={type}>
-            {title}
-          </Styled.HomeBlockSecondaryTitle>
-          <Styled.HomeBlockSecondaryDesc>{desc}</Styled.HomeBlockSecondaryDesc>
+    <Parallax bgImage={background} strength={400}>
+      <Styled.HomeBlockSecondaryContainer>
+        <Styled.HomeBlockLeft type={type}>
+          <Styled.HomeBlockSecondaryImage
+            src={image}
+            alt=""
+            imageWidth={imageWidth}
+          />
+        </Styled.HomeBlockLeft>
+        <Styled.HomeBlockRight>
+          <Styled.HomeBlockSecondaryContent type={type}>
+            <Styled.HomeBlockSecondaryTitle type={type}>
+              {title}
+            </Styled.HomeBlockSecondaryTitle>
+            <Styled.HomeBlockSecondaryDesc>{desc}</Styled.HomeBlockSecondaryDesc>
 
-          <Styled.HomeBlockSecondaryCTA as="a" href={url} target="_blank">
-            {textLink}
-          </Styled.HomeBlockSecondaryCTA>
-        </Styled.HomeBlockSecondaryContent>
-      </Styled.HomeBlockRight>
-    </Styled.HomeBlockSecondaryContainer>
+            <Styled.HomeBlockSecondaryCTA as="a" href={url} target="_blank" rel="noopener">
+              {textLink}
+            </Styled.HomeBlockSecondaryCTA>
+          </Styled.HomeBlockSecondaryContent>
+        </Styled.HomeBlockRight>
+      </Styled.HomeBlockSecondaryContainer>
+    </Parallax>
   )
 }
 
