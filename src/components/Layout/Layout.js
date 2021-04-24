@@ -8,6 +8,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import "normalize.css"
+import 'swiper/swiper-bundle.min.css';
 
 import { GlobalStyled } from "./GlobalStyled"
 import { Helmet } from "react-helmet"

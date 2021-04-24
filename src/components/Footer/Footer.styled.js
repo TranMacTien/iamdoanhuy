@@ -1,49 +1,75 @@
 import styled from "styled-components"
-import { Colors } from "@constants"
+import { Fonts } from "constants"
 
-export const StyledContainer = styled.footer`
-  background: ${Colors.Primary};
-  padding: 50px calc((100vw - 950px) / 2) 140px;
+export const Container = styled.footer`
+  padding: 50px calc((100vw - 1200px) / 2);
 `
 
-export const StyledSectionTop = styled.div`
-  display: flex;
+export const SectionTop = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: flex-start;
   margin-bottom: 80px;
 `
 
-export const StyledSectionBottom = styled.ul`
+export const SocialList = styled.ul`
+  padding: 0;
+  margin: 36px 0 0;
+  list-style: none;
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-`
-
-export const StyledSectionBottomItem = styled.li`
-  a {
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 16px;
-    color: white;
-    text-decoration: none;
-  }
-`
-
-export const StyledSocialList = styled.ul`
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  display: grid;
-  grid-gap: 16px;
-  grid-template-columns: repeat(3, 1fr);
+  column-gap: 32px;
   a {
     display: block;
   }
   img {
     display: block;
+  }
+`
+
+export const LogoImage = styled.img`
+  width: 270px;
+  display: block;
+`
+
+export const FooterTitle = styled.h2`
+  font-family: ${Fonts.Secondary};
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.25;
+  color: white;
+  position: relative;
+  margin: 0 0 32px 0;
+  padding-bottom: 16px;
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 5px;
+    background: white;
+  }
+`
+
+export const FooterList = styled.ul`
+  list-style: none;
+  margin: 0;
+  padding: 0;
+`
+
+export const FooterListItem = styled.li`
+  a {
+    font-family: ${Fonts.Secondary};
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 1.25;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 24px;
+    display: inline-block;
   }
 `

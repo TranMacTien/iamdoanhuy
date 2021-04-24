@@ -1,10 +1,11 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 
-import { Colors, Fonts } from "@constants"
-import HomeImage from "images/home.jpeg"
+import { ButtonBase } from "components/Common.styled"
+import { Colors, Fonts } from "constants"
+import ImageHome from "images/home.jpeg"
 
 export const IntroContainer = styled.section`
-  background: url(${HomeImage}) center/cover no-repeat;
+  background: url(${ImageHome}) center/cover no-repeat;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -35,6 +36,11 @@ export const IntroDesc = styled(IntroTitle)`
   }
 `
 
+export const IntroSocialListWrapper = styled.div`
+  display: flex;
+  justify-content: flex-end;
+`
+
 export const IntroSocialList = styled.ul`
   margin: 24px 0 0;
   padding: 0;
@@ -42,9 +48,29 @@ export const IntroSocialList = styled.ul`
   display: flex;
   column-gap: 32px;
   justify-content: flex-end;
+  position: relative;
+  &:before,
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 120px;
+    height: 2px;
+    background: white;
+  }
+  &:before {
+    right: calc(100% + 32px);
+    top: 50%;
+  }
+  &:after {
+    transform: rotate(90deg);
+    transform-origin: 100% 50%;
+    bottom: calc(100% + 32px);
+    right: 0;
+  }
   img {
     display: block;
-    min-width: 32px;
+    height: 32px;
   }
 `
 
@@ -85,45 +111,100 @@ export const IntroSlogan = styled.h2`
   }
 `
 
-export const StyledPortfolioContainer = styled.section`
-  padding: 32px 6vw;
-  background: ${Colors.Primary};
+export const HomeBlockSecondaryContainer = styled.section`
+  padding: 100px 6vw;
+  background: url(${props => props.background}) center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  column-gap: 32px;
 `
 
-export const StyledCourseSection = styled.section`
-  padding: 56px 6vw 90px;
-`
-
-export const StyledCourseContainer = styled.div`
-  background: #ffffff;
-  box-shadow: 0px 0px 42px rgba(0, 0, 0, 0.16);
-  border-radius: 28px;
-  padding: 32px;
-  margin: 56px auto 0;
-  box-sizing: border-box;
-  max-width: 950px;
-`
-
-export const StyledCourseWrapper = styled.div``
-
-export const StyledCourseImage = styled.img`
+export const HomeBlockSecondaryImage = styled.img`
+  max-width: ${props => props.imageWidth || 400}px;
   width: 100%;
-`
-export const StyledCourseTitle = styled.h3`
-  font-style: normal;
-  font-weight: normal;
-  font-size: 30px;
-  line-height: 39px;
-  color: ${Colors.Primary};
-  margin: 44px 0 12px 0;
-  text-align: center;
+  display: block;
+  margin: 0 auto;
 `
 
-export const StyledCourseLink = styled.a`
+export const HomeBlockSecondaryTitle = styled.h2`
+  font-family: ${Fonts.Secondary};
   font-style: normal;
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 26px;
-  color: ${Colors.Primary};
-  text-decoration: none;
+  font-weight: 800;
+  font-size: 60px;
+  line-height: 1.25;
+  color: white;
+  margin: 0 0 32px 0;
+  position: relative;
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 5px;
+    height: 60%;
+    background: white;
+    top: 50%;
+    transform: translateY(-50%);
+    ${props =>
+      props.type === "primary"
+        ? css`
+            left: -32px;
+          `
+        : css`
+            right: -32px;
+          `}
+  }
+`
+
+export const HomeBlockSecondaryDesc = styled.div`
+  p {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    color: white;
+    margin: 0 0 1rem 0;
+    max-width: 550px;
+  }
+`
+
+export const HomeBlockLeft = styled.div`
+  width: 50%;
+  order: ${props => (props.type === "primary" ? 1 : 3)};
+`
+
+export const HomeBlockRight = styled.div`
+  width: 50%;
+  order: 2;
+`
+
+export const HomeBlockSecondaryContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: ${props =>
+    props.type === "primary" ? "flex-start" : "flex-end"};
+  text-align: ${props => (props.type === "primary" ? "left" : "right")};
+`
+
+export const HomeBlockSecondaryCTA = styled(ButtonBase)`
+  margin-top: 32px;
+`
+
+export const SliderContainer = styled.div`
+  padding: 20px 0;
+`
+
+export const SliderImageWrapper = styled.div`
+  position: relative;
+  height: 0;
+  padding-bottom: 100%;
+`
+
+export const SliderImage = styled.img`
+  position: absolute;
+  width: 100%;
+  display: block;
+  top: 0;
+  left: 0;
+  height: 100%;
+  object-fit: cover;
 `

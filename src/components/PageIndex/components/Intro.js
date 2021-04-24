@@ -3,6 +3,7 @@ import React from "react"
 import ImageTiktok from "images/logo-tiktok.svg"
 import ImageYoutube from "images/logo-youtube.svg"
 import ImageFacebook from "images/logo-facebook.svg"
+import ImageInsta from "images/logo-insta.svg"
 import * as Styled from "../PageIndex.styled"
 
 const IconSocial = [
@@ -22,8 +23,8 @@ const IconSocial = [
     url: "",
   },
   {
-    name: "Tiktok",
-    logo: ImageFacebook,
+    name: "Instagram",
+    logo: ImageInsta,
     url: "",
   },
 ]
@@ -52,9 +53,11 @@ function Intro(props) {
           <span>- designer -</span>
         </Styled.IntroDesc>
 
-        <Styled.IntroSocialList>
-          {IconSocial.map(renderIcon)}
-        </Styled.IntroSocialList>
+        <Styled.IntroSocialListWrapper>
+          <Styled.IntroSocialList>
+            {IconSocial.map(renderIcon)}
+          </Styled.IntroSocialList>
+        </Styled.IntroSocialListWrapper>
       </div>
     </Styled.IntroContainer>
   )

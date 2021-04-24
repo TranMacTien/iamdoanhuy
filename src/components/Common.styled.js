@@ -1,5 +1,6 @@
 import styled from "styled-components"
-import { Colors } from "@constants"
+import { Colors } from "constants"
+import { Fonts } from "constants"
 
 export const SectionTitle = styled.h2`
   margin: 0 0 ${props => props.marginBottom || 0} 0;
@@ -24,11 +25,11 @@ export const SectionTitle = styled.h2`
 `
 
 const ButtonColor = {
-  primary: Colors.Primary,
+  primary: "black",
 }
 
 const ButtonBackground = {
-  primary: "none",
+  primary: Colors.Secondary,
 }
 
 const ButtonBorder = {
@@ -50,14 +51,16 @@ const ButtonPadding = {
 export const ButtonBase = styled.button`
   display: inline-flex;
   border: none;
-  background: ${props => ButtonBackground[props.type] || "none"};
-  color: ${props => ButtonColor[props.type] || "white"};
-  font-size: ${props => ButtonFontSize[props.size] || 16}px;
-  border-radius: 999px;
-  border: 1px solid ${props => ButtonBorder[props.type] || "white"};
-  height: ${props => ButtonHeight[props.size] || 40}px;
+  background: ${props => ButtonBackground[props.type] || Colors.Secondary};
+  color: ${props => ButtonColor[props.type] || "black"};
+  font-size: ${props => ButtonFontSize[props.size] || 18}px;
+  font-weight: 800;
+  font-family: ${Fonts.Secondary};
+  border-radius: 4px;
+  border: 1px solid ${props => ButtonBorder[props.type] || Colors.Secondary};
+  height: ${props => ButtonHeight[props.size] || 48}px;
   justify-content: center;
-  padding: 0 ${props => ButtonPadding[props.size] || 20}px;
+  padding: 0 ${props => ButtonPadding[props.size] || 40}px;
   align-items: center;
   line-height: 1;
   outline: none;

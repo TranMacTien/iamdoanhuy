@@ -14,5 +14,6 @@ export const GlobalStyled = createGlobalStyle`
     font-smooth: always;
     -webkit-text-size-adjust: 100%;
     font-weight: 400;
+    background: black;
   }
 `
