@@ -9,9 +9,10 @@ import ImageHomeBg2 from "images/home_bg_2.jpeg"
 import ImageSpeedArt from "images/speed_art_2.jpeg"
 import ImageYoutube from "images/youtube_icon.png"
 import ImageTiktok from "images/tiktok_icon.png"
+import BlockQuote from "components/BlockQuote"
+
 import Intro from "./components/Intro"
 import HomeBlockSecondary from "./components/HomeBlockSecondary"
-import { BlockQuote } from "components"
 import * as Styled from "./PageIndex.styled"
 
 const MAX_SLIDE_WIDTH = 300

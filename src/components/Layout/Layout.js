@@ -7,14 +7,15 @@
 
 import React from "react"
 import PropTypes from "prop-types"
+import { Helmet } from "react-helmet"
 import "normalize.css"
 import 'swiper/swiper-bundle.min.css';
 
 import { GlobalStyled } from "./GlobalStyled"
-import { Helmet } from "react-helmet"
 // import { useStaticQuery, graphql } from "gatsby"
 
-import { Header, Footer } from "components"
+import Header from "components/Header"
+import Footer from "components/Footer"
 
 const Layout = ({ children }) => {
   /*  const data = useStaticQuery(graphql`

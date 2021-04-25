@@ -1,6 +1,7 @@
 import React from "react"
 
-import { Layout, PageIndex } from "components"
+import Layout from "components/Layout"
+import PageIndex from "components/PageIndex"
 import SEO from "components/seo"
 
 const IndexPage = () => (

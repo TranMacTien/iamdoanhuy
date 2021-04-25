@@ -1,14 +1,15 @@
 import styled from "styled-components"
+
 import { Fonts } from "@constants"
 import ImageBackground from "images/home_bg_3.jpeg"
 import ImageQuote from "images/quote.svg"
 
 export const Container = styled.section`
-  background: url("${ImageBackground}") center/cover no-repeat;
   height: 30vw;
   display: flex;
   align-items: center;
   padding: 0 6vw;
+  background-color: rgb(23 0 31 / 60%);
 `
 
 export const QuoteContainer = styled.div`

@@ -19,8 +19,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Iamdoanhuy`,
+        short_name: `doanhuy`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
@@ -53,6 +53,22 @@ module.exports = {
         // Add any options here
       },
     },
+    // {
+    //   resolve: `gatsby-plugin-layout`,
+    //   options: {
+    //     component: require.resolve(`${__dirname}/src/components/Layout/index`),
+    //   },
+    // },
+    `gatsby-plugin-perf-budgets`,
+    `gatsby-plugin-webpack-bundle-analyser-v2`,
+    // {
+    //   resolve: `gatsby-plugin-netlify`,
+    //   options: {
+    //     "/*": {
+
+    //     }
+    //   }
+    // }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

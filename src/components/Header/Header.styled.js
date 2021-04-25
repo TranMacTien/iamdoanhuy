@@ -1,5 +1,7 @@
-import { Fonts } from "@constants"
 import styled from "styled-components"
+import media from "styled-media-query"
+
+import { Fonts } from "@constants"
 
 export const StyledContainer = styled.div`
   position: absolute;
@@ -10,7 +12,8 @@ export const StyledContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   z-index: 2;
-  padding: 24px 6vw 0;
+  padding: 0 6vw;
+  height: 90px;
 `
 
 export const StyledLogoContainer = styled.div`
@@ -20,26 +23,28 @@ export const StyledLogoContainer = styled.div`
 `
 
 export const StyledMenuContainer = styled.div`
-  display: flex;
-  align-items: center;
-  ul {
+  display: none;
+  ${media.greaterThan("medium")`
     display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    column-gap: 48px;
-  }
-
-  a {
-    display: block;
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 500;
-    font-family: ${Fonts.Secondary};
-    position: relative;
-    &.active {
-
+    align-items: center;
+    ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      column-gap: 48px;
     }
-  }
+
+    a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 500;
+      font-family: ${Fonts.Secondary};
+      position: relative;
+      &.active {
+      }
+    }
+  `}
 `

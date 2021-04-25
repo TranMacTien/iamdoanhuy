@@ -1,5 +1,5 @@
 import React from "react"
-import { Parallax } from "react-parallax";
+import { Parallax } from "react-parallax"
 
 import * as Styled from "../PageIndex.styled"
 
@@ -28,9 +28,16 @@ function HomeBlockSecondary({
             <Styled.HomeBlockSecondaryTitle type={type}>
               {title}
             </Styled.HomeBlockSecondaryTitle>
-            <Styled.HomeBlockSecondaryDesc>{desc}</Styled.HomeBlockSecondaryDesc>
+            <Styled.HomeBlockSecondaryDesc>
+              {desc}
+            </Styled.HomeBlockSecondaryDesc>
 
-            <Styled.HomeBlockSecondaryCTA as="a" href={url} target="_blank" rel="noopener">
+            <Styled.HomeBlockSecondaryCTA
+              as="a"
+              href={url}
+              target="_blank"
+              rel="noopener"
+            >
               {textLink}
             </Styled.HomeBlockSecondaryCTA>
           </Styled.HomeBlockSecondaryContent>
