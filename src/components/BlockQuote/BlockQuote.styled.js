@@ -1,7 +1,6 @@
 import styled from "styled-components"
 
 import { Fonts } from "@constants"
-import ImageBackground from "images/home_bg_3.jpeg"
 import ImageQuote from "images/quote.svg"
 
 export const Container = styled.section`

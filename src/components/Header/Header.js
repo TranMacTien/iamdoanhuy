@@ -22,21 +22,21 @@ function Header(props) {
           <li>
             <Link activeClassName="active" to="/khoa-hoc-offline">Khoá học Offline</Link>
           </li>
-          <li>
+          {/* <li>
             <Link activeClassName="active" to="/khoa-hoc-online">Khoá học online</Link>
-          </li>
+          </li> */}
           <li>
             <Link activeClassName="active" to="/artwork">Artwork</Link>
           </li>
-          <li>
+          {/* <li>
             <Link activeClassName="active" to="/blog">Blog</Link>
-          </li>
-          <li>
+          </li> */}
+          {/* <li>
             <Link activeClassName="active" to="/tai-mien-phi">Tải miễn phí</Link>
-          </li>
-          <li>
+          </li> */}
+          {/* <li>
             <Link activeClassName="active" to="/lien-he">About</Link>
-          </li>
+          </li> */}
         </ul>
       </StyledMenuContainer>
     </StyledContainer>

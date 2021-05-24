@@ -37,7 +37,7 @@ const Layout = ({ children }) => {
           rel="stylesheet"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;800&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;800&display=swap"
           rel="stylesheet"
         />
       </Helmet>

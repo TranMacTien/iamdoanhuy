@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 
 import Logo from "images/logo-2.svg"
 import LogoYoutube from "images/logo-youtube.svg"
@@ -40,11 +41,11 @@ function Footer(props) {
         <div>
           <Styled.FooterTitle>KHOÁ HỌC</Styled.FooterTitle>
           <Styled.FooterList>
-            <Styled.FooterListItem>
+            {/* <Styled.FooterListItem>
               <a href="">Khoá online</a>
-            </Styled.FooterListItem>
+            </Styled.FooterListItem> */}
             <Styled.FooterListItem>
-              <a href="">Khoá offline</a>
+              <Link to="/khoa-hoc-offline">Khoá Offline</Link>
             </Styled.FooterListItem>
           </Styled.FooterList>
         </div>
@@ -55,7 +56,9 @@ function Footer(props) {
               <a href="tel: 0968 573 574">Số điện thoại: 0968 573 574</a>
             </Styled.FooterListItem>
             <Styled.FooterListItem>
-              <a href="mailto: huydoan9825@gmail.com">Gmail: huydoan9825@gmail.com</a>
+              <a href="mailto: huydoan9825@gmail.com">
+                Gmail: huydoan9825@gmail.com
+              </a>
             </Styled.FooterListItem>
           </Styled.FooterList>
         </div>

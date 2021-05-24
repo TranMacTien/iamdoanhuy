@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import media from "styled-media-query";
+import media from "styled-media-query"
 
 import { Fonts } from "@constants"
 
@@ -11,7 +11,7 @@ export const Title = styled.h1`
   margin: 0;
   font-size: 48px;
   line-height: 1.3;
-  ${media.greaterThan('medium')`
+  ${media.greaterThan("medium")`
     font-size: 90px;
   `}
 `
@@ -24,7 +24,7 @@ export const SubTitle = styled.h2`
   color: white;
   max-width: 614px;
   font-size: 14px;
-  ${media.greaterThan('medium')`
+  ${media.greaterThan("medium")`
     font-size: 16px;
   `}
 `
