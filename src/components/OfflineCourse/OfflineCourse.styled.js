@@ -1,25 +1,34 @@
 import React from "react"
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import media from "styled-media-query"
 
 import { ButtonBase } from "components/Common.styled"
 import { Fonts, Colors } from "@constants"
 
-export const Title = styled.h1`
+const TitleStyles = css`
   font-family: ${Fonts.Secondary};
   font-style: normal;
   font-weight: 800;
-  line-height: 61px;
   color: white;
-  margin: 0;
-  font-size: 36px;
+  margin: 16px 0;
+  line-height: 1.3;
+  font-size: 24px;
   ${media.greaterThan("medium")`
-    font-size: 50px;
+    margin: 32px 0;
+    font-size: 48px;
   `}
 `
 
-export const SubTitle = styled(props => <Title {...props} as="h2" />)`
-  font-size: 90px;
+export const Title = styled.h1`
+  ${TitleStyles}
+`
+
+export const SubTitle = styled.h2`
+  ${TitleStyles}
+  font-size: 36px;
+  ${media.greaterThan("medium")`
+    font-size: 84px;
+  `}
 `
 
 export const Container = styled.div`
@@ -50,9 +59,11 @@ export const CourseList = styled.ul`
   margin: 24px 0;
   padding: 0;
   list-style: none;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
+  ${media.greaterThan("medium")`
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+  `}
 `
 
 export const CourseItem = styled.li`
@@ -61,8 +72,13 @@ export const CourseItem = styled.li`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 90px 32px;
   background: ${props => props.background || "rgba(40, 9, 64, 0.87)"};
+  padding: 48px 16px;
+  margin-bottom: 6vw;
+  ${media.greaterThan("medium")`
+    margin-bottom: 0;
+    padding: 90px 32px;
+  `}
 `
 
 export const CourseTitle = styled.h3`
@@ -122,8 +138,10 @@ export const OverviewTitle = styled.h3`
 `
 
 export const OverviewMain = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  ${media.greaterThan("medium")`
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  `}
 `
 
 export const OverviewImage = styled.img`
@@ -131,6 +149,10 @@ export const OverviewImage = styled.img`
   max-width: 325px;
   width: 100%;
   justify-self: center;
+  padding: 0 32px 32px;
+  ${media.greaterThan("medium")`
+    padding: 0;
+  `}
 `
 
 export const OverviewInfoList = styled.ul`
@@ -141,11 +163,15 @@ export const OverviewInfoList = styled.ul`
 `
 
 export const OverviewInfoItem = styled.li`
-  font-size: 18px;
   line-height: 1.3;
   margin: 0 0 16px 0;
   display: grid;
-  grid-template-columns: 200px minmax(0, 1fr);
+  font-size: 16px;
+  grid-template-columns: 180px minmax(0, 1fr);
+  ${media.greaterThan("medium")`
+    grid-template-columns: 200px minmax(0, 1fr);
+    font-size: 18px;
+  `}
 `
 
 export const LearningPath = styled.section`
@@ -161,7 +187,10 @@ export const LearningPathTitle = styled.h3`
   line-height: 125.68%;
   text-align: center;
   color: white;
-  margin: 0 0 80px 0;
+  margin: 0 0 32px 0;
+  ${media.greaterThan("medium")`
+    margin-bottom: 80px;
+  `}
 `
 
 export const LearningPathContainer = styled.div`
@@ -171,24 +200,40 @@ export const LearningPathContainer = styled.div`
 
 export const LearningPathList = styled.ul`
   color: white;
+  padding-left: 1rem;
+  ${media.greaterThan("medium")`
+    padding-left: 2rem;
+  `}
 `
 
 export const LearningPathItem = styled.li`
-  display: grid;
-  grid-template-columns: 300px minmax(0, 1fr);
-  margin: 0 0 64px 0;
+  ${media.greaterThan("medium")`
+    display: grid;
+    grid-template-columns: 300px minmax(0, 1fr);
+    margin: 0 0 64px 0;
+  `}
 `
 
 export const LearningPathItemTitle = styled.h4`
-  font-weight: 600;
+  font-weight: 700;
   font-style: normal;
+  line-height: 28px;
+  margin: 0 0 8px 0;
   font-size: 18px;
-  line-height: 32px;
-  margin: 0;
+  ${media.greaterThan("medium")`
+    line-height: 32px;
+    margin: 0;
+  `}
 `
 
 export const LearningPathContent = styled(props => (
   <LearningPathItemTitle {...props} as="p" />
 ))`
   font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 32px;
+  ${media.greaterThan("medium")`
+    margin-bottom: 0;
+    font-size: 18px;
+  `}
 `

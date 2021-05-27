@@ -1,28 +1,44 @@
 import styled from "styled-components"
+import media from "styled-media-query"
+
 import { Fonts } from "@constants"
 
 export const Container = styled.footer`
-  padding: 50px calc((100vw - 1200px) / 2);
+  padding: 32px 6vw;
+  ${media.greaterThan("medium")`
+    padding: 50px calc((100vw - 1200px) / 2);
+  `}
 `
 
 export const SectionTop = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-content: space-between;
-  align-items: flex-start;
   margin-bottom: 80px;
+  ${media.greaterThan("medium")`
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    align-items: flex-start;
+  `}
 `
 
 export const SocialList = styled.ul`
   padding: 0;
-  margin: 36px 0 0;
   list-style: none;
   display: flex;
-  column-gap: 32px;
+  margin: 36px 0;
+  ${media.greaterThan("medium")`
+    margin: 36px 0 0;
+  `}
   a {
     display: block;
+    height: 24px;
+    margin-right: 24px;
+    ${media.greaterThan("medium")`
+      margin-right: 32px;
+      height: 36px;
+    `}
   }
   img {
+    height: 100%;
     display: block;
   }
 `
@@ -36,12 +52,16 @@ export const FooterTitle = styled.h2`
   font-family: ${Fonts.Secondary};
   font-style: normal;
   font-weight: 700;
-  font-size: 36px;
   line-height: 1.25;
   color: white;
   position: relative;
-  margin: 0 0 32px 0;
   padding-bottom: 16px;
+  font-size: 18px;
+  margin: 0 0 16px 0;
+  ${media.greaterThan("medium")`
+    margin: 0 0 32px 0;
+    font-size: 36px;
+  `}
   &:after {
     content: "";
     display: block;
@@ -56,8 +76,11 @@ export const FooterTitle = styled.h2`
 
 export const FooterList = styled.ul`
   list-style: none;
-  margin: 0;
   padding: 0;
+  margin: 0 0 32px 0;
+  ${media.greaterThan("medium")`
+    margin: 0;
+  `}
 `
 
 export const FooterListItem = styled.li`
@@ -65,11 +88,14 @@ export const FooterListItem = styled.li`
     font-family: ${Fonts.Secondary};
     font-style: normal;
     font-weight: normal;
-    font-size: 18px;
     line-height: 1.25;
     color: white;
     text-decoration: none;
     margin-bottom: 24px;
     display: inline-block;
+    font-size: 16px;
+    ${media.greaterThan("medium")`
+      font-size: 18px;
+    `}
   }
 `
