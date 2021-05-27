@@ -11,6 +11,8 @@ export const Title = styled.h1`
   font-weight: 800;
   line-height: 61px;
   color: white;
+  margin: 0;
+  font-size: 36px;
   ${media.greaterThan("medium")`
     font-size: 50px;
   `}
