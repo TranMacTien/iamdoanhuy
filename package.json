@@ -38,6 +38,7 @@
     "babel-preset-gatsby": "^1.5.0",
     "gatsby-plugin-perf-budgets": "0.0.17",
     "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.22",
+    "postcss": "^8.3.0",
     "prettier": "2.2.1"
   },
   "keywords": [
@@ -62,7 +63,8 @@
     "url": "https://github.com/TranMacTien/iamdoanhuy/issues"
   },
   "resolutions": {
-    "postcss": "^8.2.10",
-    "trim": "^0.0.3"
+    "trim": "^0.0.3",
+    "browserslist": "^4.16.5",
+    "postcss": "^8.2.10"
   }
 }
