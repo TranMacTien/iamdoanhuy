@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { darken } from "polished"
 import { Colors } from "@constants"
 import { Fonts } from "@constants"
 
@@ -68,4 +69,11 @@ export const ButtonBase = styled.button`
   /* for link <a /> tag */
   text-decoration: none;
   box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    background: ${props =>
+      `${darken(0.08, ButtonBackground[props.type] || Colors.Secondary)}`};
+    border-color: ${props =>
+      `${darken(0.08, ButtonBackground[props.type] || Colors.Secondary)}`};
+  }
 `
