@@ -6,7 +6,7 @@ import OfflineCourse from 'components/OfflineCourse'
 
 const OfflineCoursePage = () => (
   <Layout>
-    <SEO title="Khoá học Offline" />
+    <SEO title="Khoá học" />
     <OfflineCourse />
   </Layout>
 )
