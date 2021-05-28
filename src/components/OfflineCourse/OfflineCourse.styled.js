@@ -1,6 +1,7 @@
 import React from "react"
 import styled, { css } from "styled-components"
 import media from "styled-media-query"
+import {rgba} from 'polished'
 
 import { ButtonBase } from "components/Common.styled"
 import { Fonts, Colors } from "@constants"
@@ -9,7 +10,7 @@ const TitleStyles = css`
   font-family: ${Fonts.Secondary};
   font-style: normal;
   font-weight: 800;
-  color: white;
+  color: #eee;
   margin: 16px 0;
   line-height: 1.3;
   font-size: 24px;
@@ -51,11 +52,11 @@ export const Container = styled.div`
 `
 
 export const CoursesContainer = styled.section`
-  padding: 0 6vw;
+  padding: 0;
   margin: 0 auto;
 `
 export const CourseList = styled.ul`
-  color: white;
+  color: #eee;
   margin: 24px 0;
   padding: 0;
   list-style: none;
@@ -72,12 +73,18 @@ export const CourseItem = styled.li`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background: ${props => props.background || "rgba(40, 9, 64, 0.87)"};
+  background: linear-gradient(
+      0deg,
+      ${props => props.overlay},
+      ${props => props.overlay}
+    ),
+    url("${props => props.background}") center/cover no-repeat;
   padding: 48px 16px;
   margin-bottom: 6vw;
+
   ${media.greaterThan("medium")`
     margin-bottom: 0;
-    padding: 90px 32px;
+    padding: 64px 32px;
   `}
 `
 
@@ -92,11 +99,11 @@ export const CourseTitle = styled.h3`
 
 export const CourseInfoList = styled.ul`
   padding: 0;
-  margin: 0 0 ${props => props.marginBottom || 64}px 0;
+  margin: 0 0 ${props => props.marginBottom || 32}px 0;
 `
 
 export const CourseText = styled.p`
-  font-family: ${Fonts.Secondary};
+  font-family: ${Fonts.Primary};
   font-style: normal;
   font-weight: ${props => props.weight || 300};
   font-size: 16px;
@@ -133,7 +140,7 @@ export const OverviewTitle = styled.h3`
   font-size: 24px;
   line-height: 125.68%;
   text-align: center;
-  color: #ffffff;
+  color: #eee;
   margin: 0 0 64px 0;
 `
 
@@ -158,7 +165,7 @@ export const OverviewImage = styled.img`
 export const OverviewInfoList = styled.ul`
   padding: 0;
   margin: 0;
-  color: white;
+  color: #eee;
   align-self: center;
 `
 
@@ -186,7 +193,7 @@ export const LearningPathTitle = styled.h3`
   font-size: 24px;
   line-height: 125.68%;
   text-align: center;
-  color: white;
+  color: #eee;
   margin: 0 0 32px 0;
   ${media.greaterThan("medium")`
     margin-bottom: 80px;
@@ -199,7 +206,7 @@ export const LearningPathContainer = styled.div`
 `
 
 export const LearningPathList = styled.ul`
-  color: white;
+  color: #eee;
   padding-left: 1rem;
   ${media.greaterThan("medium")`
     padding-left: 2rem;

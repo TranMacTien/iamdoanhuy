@@ -1,3 +1,7 @@
+import ImageBackground from "images/khoa_hoc.jpg"
+import ImageBackground2 from "images/khoa_hoc_2.jpg"
+import ImageBackground3 from "images/khoa_hoc_3.jpg"
+
 export const COURSE = [
   {
     title: "CAPSLOCK 1 - 1",
@@ -9,7 +13,8 @@ export const COURSE = [
     ],
     form: ["Offline trực tiếp tại TP HCM", "Online trực tiếp qua video call"],
     pricing: "3.500.000",
-    // background: ""
+    background: ImageBackground,
+    overlay: "rgba(40, 9, 64, 0.87)",
   },
   {
     title: "NHÓM CAPSLOCK",
@@ -21,7 +26,8 @@ export const COURSE = [
     ],
     form: ["Offline trực tiếp tại TP HCM"],
     pricing: "2.500.000",
-    background: "rgba(4, 24, 41, 0.87)",
+    background: ImageBackground2,
+    overlay: "rgba(4, 24, 41, 0.87)",
   },
   {
     title: "LỚP CAPSLOCK CENTER",
@@ -34,7 +40,8 @@ export const COURSE = [
     ],
     form: ["Offline trực tiếp tại TP HCM"],
     pricing: "1.500.000",
-    background: "rgba(102, 43, 0, 0.87)",
+    background: ImageBackground3,
+    overlay: "rgba(102, 43, 0, 0.87)",
   },
 ]
 

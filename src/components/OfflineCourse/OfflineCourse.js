@@ -1,7 +1,7 @@
 import React from "react"
 import { Parallax } from "react-parallax"
 
-import ImageHomeBg3 from "images/home_bg_3.jpeg"
+import ImageHomeBg3 from "images/bg_khoa_hoc.jpg"
 import ImagePhotoshop from "images/photoshop_icon.png"
 import IconCheck from "images/check.svg"
 import { COURSE } from "./data"
@@ -22,7 +22,11 @@ function OfflineCourse(props) {
       <Styled.CoursesContainer>
         <Styled.CourseList>
           {COURSE.map((course, index) => (
-            <Styled.CourseItem key={index} background={course.background}>
+            <Styled.CourseItem
+              key={index}
+              background={course.background}
+              overlay={course.overlay}
+            >
               <div>
                 <Styled.CourseTitle>{course.title}</Styled.CourseTitle>
                 <Styled.CourseInfoList>
