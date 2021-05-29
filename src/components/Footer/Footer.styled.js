@@ -32,6 +32,10 @@ export const SocialList = styled.ul`
     display: block;
     height: 24px;
     margin-right: 24px;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      transform: scale3d(1.1, 1.1, 1);
+    }
     ${media.greaterThan("medium")`
       margin-right: 32px;
       height: 36px;

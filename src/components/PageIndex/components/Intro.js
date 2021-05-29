@@ -12,22 +12,22 @@ const IconSocial = [
   {
     name: "Tiktok",
     logo: ImageTiktok,
-    url: "",
+    url: "https://www.tiktok.com/@iamdoanhuy",
   },
   {
     name: "Youtube",
     logo: ImageYoutube,
-    url: "",
+    url: "https://www.youtube.com/channel/UCitrOi2Xi4YbsYZ9PUfXuPg",
   },
   {
     name: "Facebook",
     logo: ImageFacebook,
-    url: "",
+    url: "https://www.facebook.com/iamdoanhuyy",
   },
   {
     name: "Instagram",
     logo: ImageInsta,
-    url: "",
+    url: "https://www.instagram.com/iamdoanhuy/",
   },
 ]
 

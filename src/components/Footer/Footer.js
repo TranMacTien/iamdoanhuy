@@ -17,23 +17,23 @@ function Footer(props) {
           <Styled.LogoImage src={Logo} alt="I AM DOAN HUY" />
           <Styled.SocialList>
             <li>
-              <a href="">
-                <img src={LogoYoutube} alt="" />
+              <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/channel/UCitrOi2Xi4YbsYZ9PUfXuPg">
+                <img src={LogoYoutube} alt="youtube" />
               </a>
             </li>
             <li>
-              <a href="">
-                <img src={LogoFacebook} alt="" />
+              <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/iamdoanhuyy">
+                <img src={LogoFacebook} alt="facebook" />
               </a>
             </li>
             <li>
-              <a href="">
-                <img src={LogoTiktok} alt="" />
+              <a target="_blank" rel="noopener noreferrer" href="https://www.tiktok.com/@iamdoanhuy">
+                <img src={LogoTiktok} alt="tiktok" />
               </a>
             </li>
             <li>
-              <a href="">
-                <img src={LogoInsta} alt="" />
+              <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/iamdoanhuy/">
+                <img src={LogoInsta} alt="instagram" />
               </a>
             </li>
           </Styled.SocialList>
