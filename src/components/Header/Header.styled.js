@@ -13,12 +13,18 @@ export const StyledContainer = styled.div`
   justify-content: space-between;
   z-index: 2;
   padding: 0 6vw;
-  height: 90px;
+  height: 60px;
+  ${media.greaterThan("medium")`
+    height: 90px;
+  `}
 `
 
 export const StyledLogoContainer = styled.div`
   img {
-    width: 160px;
+    width: 120px;
+    ${media.greaterThan("medium")`
+      width: 160px;
+  `}
   }
 `
 

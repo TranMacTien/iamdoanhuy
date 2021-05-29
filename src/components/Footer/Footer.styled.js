@@ -44,8 +44,11 @@ export const SocialList = styled.ul`
 `
 
 export const LogoImage = styled.img`
-  width: 270px;
+  width: 200px;
   display: block;
+  ${media.greaterThan("medium")`
+    width: 270px;
+  `}
 `
 
 export const FooterTitle = styled.h2`

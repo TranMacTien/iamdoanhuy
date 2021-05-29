@@ -42,8 +42,6 @@ function OfflineCourse(props) {
                     </Styled.CourseInfoItem>
                   ))}
                 </Styled.CourseInfoList>
-              </div>
-              <div>
                 <Styled.CourseText weight={600}>
                   Hình thức học:
                 </Styled.CourseText>
@@ -54,15 +52,23 @@ function OfflineCourse(props) {
                     </Styled.CourseText>
                   ))}
                 </Styled.CourseInfoList>
-                <Styled.Pricing>{course.pricing}đ</Styled.Pricing>
-                <Styled.CTA
-                  as="a"
-                  href="https://www.messenger.com/t/iamdoanhuyy/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  ĐĂNG KÍ NGAY
-                </Styled.CTA>
+              </div>
+              <div>
+                {course.pricing && (
+                  <Styled.Pricing>{course.pricing}đ</Styled.Pricing>
+                )}
+                {index === 2 ? (
+                  <Styled.CTA disabled>TẠM NGỪNG TUYỂN SINH</Styled.CTA>
+                ) : (
+                  <Styled.CTA
+                    as="a"
+                    href="https://www.messenger.com/t/iamdoanhuyy/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    ĐĂNG KÍ NGAY
+                  </Styled.CTA>
+                )}
               </div>
             </Styled.CourseItem>
           ))}

@@ -99,7 +99,8 @@ export const CourseTitle = styled.h3`
 
 export const CourseInfoList = styled.ul`
   padding: 0;
-  margin: 0 0 ${props => props.marginBottom || 32}px 0;
+  margin: 0 auto ${props => props.marginBottom || 32}px auto;
+  max-width: 400px;
 `
 
 export const CourseText = styled.p`

@@ -76,4 +76,8 @@ export const ButtonBase = styled.button`
     border-color: ${props =>
       `${darken(0.08, ButtonBackground[props.type] || Colors.Secondary)}`};
   }
+  &:disabled {
+    opacity: 0.6;
+    pointer-events: none;
+  }
 `
