@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components"
+import media from "styled-media-query"
 
 import { ButtonBase } from "components/Common.styled"
 import { Fonts, Colors } from "@constants"
@@ -78,28 +79,36 @@ export const IntroSlogan = styled.h2`
     font-family: ${Fonts.Secondary};
     font-style: normal;
     font-weight: 800;
-    font-size: 120px;
-    line-height: 146px;
     position: relative;
     display: inline-block;
     padding-left: 32px;
+    font-size: 48px;
+    ${media.greaterThan("medium")`
+      line-height: 146px;
+      font-size: 120px;
+    `}
     &:before {
-      content: "";
-      position: absolute;
-      display: block;
-      width: 6px;
-      height: 50%;
-      top: 50%;
-      left: 0;
-      transform: translateY(-50%);
-      background: ${Colors.TextPrimary};
+      ${media.greaterThan("medium")`
+        content: "";
+        position: absolute;
+        display: block;
+        width: 6px;
+        height: 50%;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        background: ${Colors.TextPrimary};
+      `}
     }
     &:first-child {
     }
     &:last-child {
-      font-size: 150px;
-      margin-left: 90px;
-      padding-right: 48px;
+      font-size: 48px;
+      ${media.greaterThan("medium")`
+        margin-left: 90px;
+        padding-right: 48px;
+        font-size: 150px;
+      `}
       &:before {
         top: 60%;
         left: auto;
@@ -110,29 +119,41 @@ export const IntroSlogan = styled.h2`
 `
 
 export const HomeBlockSecondaryContainer = styled.section`
-  padding: 100px 6vw;
   background: url(${props => props.background}) center/cover no-repeat;
-  display: flex;
   align-items: center;
   column-gap: 32px;
+  padding: 40px 6vw;
+  ${media.greaterThan("medium")`
+    padding: 100px 6vw;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  `}
 `
 
 export const HomeBlockSecondaryImage = styled.img`
-  max-width: ${props => props.imageWidth || 400}px;
   width: 100%;
   display: block;
-  margin: 0 auto;
+  max-width: ${props => props.imageWidth || 250}px;
+  margin: 0 auto 32px;
+  ${media.greaterThan("medium")`
+    margin: 0 auto;
+    max-width: ${props => props.imageWidth || 400}px;
+  `}
 `
 
 export const HomeBlockSecondaryTitle = styled.h2`
   font-family: ${Fonts.Secondary};
   font-style: normal;
   font-weight: 800;
-  font-size: 60px;
   line-height: 1.25;
   color: ${Colors.TextPrimary};
   margin: 0 0 32px 0;
   position: relative;
+  font-size: 32px;
+  ${media.greaterThan("medium")`
+    font-size: 60px;
+    display: flex;
+  `}
   &:after {
     content: "";
     display: block;
@@ -156,7 +177,7 @@ export const HomeBlockSecondaryTitle = styled.h2`
 export const HomeBlockSecondaryDesc = styled.div`
   p {
     font-style: normal;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
     color: ${Colors.TextPrimary};
@@ -166,13 +187,17 @@ export const HomeBlockSecondaryDesc = styled.div`
 `
 
 export const HomeBlockLeft = styled.div`
-  width: 50%;
-  order: ${props => (props.type === "primary" ? 1 : 3)};
+  ${media.greaterThan("medium")`
+    width: 50%;
+    order: ${props => (props.type === "primary" ? 1 : 3)};
+  `}
 `
 
 export const HomeBlockRight = styled.div`
-  width: 50%;
-  order: 2;
+  ${media.greaterThan("medium")`
+    width: 50%;
+    order: 2;
+  `}
 `
 
 export const HomeBlockSecondaryContent = styled.div`

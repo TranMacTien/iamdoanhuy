@@ -41,11 +41,8 @@ function Footer(props) {
         <div>
           <Styled.FooterTitle>KHOÁ HỌC</Styled.FooterTitle>
           <Styled.FooterList>
-            {/* <Styled.FooterListItem>
-              <a href="">Khoá online</a>
-            </Styled.FooterListItem> */}
             <Styled.FooterListItem>
-              <Link to="/khoa-hoc">Khoá Offline</Link>
+              <Link to="/khoa-hoc">Khoá học</Link>
             </Styled.FooterListItem>
           </Styled.FooterList>
         </div>
