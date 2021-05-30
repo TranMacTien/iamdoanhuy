@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import media from "styled-media-query"
 
-import { Fonts } from "@constants"
+import { Fonts, Colors } from "@constants"
 
 export const Container = styled.footer`
   padding: 32px 6vw;
@@ -60,7 +60,7 @@ export const FooterTitle = styled.h2`
   font-style: normal;
   font-weight: 700;
   line-height: 1.25;
-  color: white;
+  color: ${Colors.TextPrimary};
   position: relative;
   padding-bottom: 16px;
   font-size: 18px;
@@ -77,7 +77,7 @@ export const FooterTitle = styled.h2`
     left: 0;
     width: 80px;
     height: 5px;
-    background: white;
+    background: ${Colors.TextPrimary};
   }
 `
 
@@ -92,11 +92,11 @@ export const FooterList = styled.ul`
 
 export const FooterListItem = styled.li`
   a {
-    font-family: ${Fonts.Secondary};
+    font-family: ${Fonts.Primary};
     font-style: normal;
     font-weight: normal;
     line-height: 1.25;
-    color: white;
+    color: ${Colors.TextPrimary};
     text-decoration: none;
     margin-bottom: 24px;
     display: inline-block;

@@ -1,14 +1,14 @@
 import styled, { css } from "styled-components"
 
 import { ButtonBase } from "components/Common.styled"
-import { Fonts } from "@constants"
+import { Fonts, Colors } from "@constants"
 
 export const IntroContainer = styled.section`
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  color: white;
+  color: ${Colors.TextPrimary};
   padding: 0 6vw 6vw;
   box-sizing: border-box;
 `
@@ -54,7 +54,7 @@ export const IntroSocialList = styled.ul`
     position: absolute;
     width: 120px;
     height: 2px;
-    background: white;
+    background: ${Colors.TextPrimary};
   }
   &:before {
     right: calc(100% + 32px);
@@ -92,7 +92,7 @@ export const IntroSlogan = styled.h2`
       top: 50%;
       left: 0;
       transform: translateY(-50%);
-      background: white;
+      background: ${Colors.TextPrimary};
     }
     &:first-child {
     }
@@ -130,7 +130,7 @@ export const HomeBlockSecondaryTitle = styled.h2`
   font-weight: 800;
   font-size: 60px;
   line-height: 1.25;
-  color: white;
+  color: ${Colors.TextPrimary};
   margin: 0 0 32px 0;
   position: relative;
   &:after {
@@ -139,7 +139,7 @@ export const HomeBlockSecondaryTitle = styled.h2`
     position: absolute;
     width: 5px;
     height: 60%;
-    background: white;
+    background: ${Colors.TextPrimary};
     top: 50%;
     transform: translateY(-50%);
     ${props =>
@@ -159,7 +159,7 @@ export const HomeBlockSecondaryDesc = styled.div`
     font-weight: 600;
     font-size: 16px;
     line-height: 1.5;
-    color: white;
+    color: ${Colors.TextPrimary};
     margin: 0 0 1rem 0;
     max-width: 550px;
   }

@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import media from "styled-media-query"
 
-import { Fonts } from "@constants"
+import { Fonts, Colors } from "@constants"
 
 export const StyledContainer = styled.div`
   position: absolute;
@@ -43,7 +43,7 @@ export const StyledMenuContainer = styled.div`
 
     a {
       display: block;
-      color: white;
+      color: ${Colors.TextPrimary};
       text-decoration: none;
       font-size: 16px;
       font-weight: 500;

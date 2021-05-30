@@ -1,7 +1,6 @@
 import React from "react"
 import styled, { css } from "styled-components"
 import media from "styled-media-query"
-import {rgba} from 'polished'
 
 import { ButtonBase } from "components/Common.styled"
 import { Fonts, Colors } from "@constants"
@@ -10,7 +9,7 @@ const TitleStyles = css`
   font-family: ${Fonts.Secondary};
   font-style: normal;
   font-weight: 800;
-  color: #eee;
+  color: ${Colors.TextPrimary};
   margin: 16px 0;
   line-height: 1.3;
   font-size: 24px;
@@ -56,7 +55,7 @@ export const CoursesContainer = styled.section`
   margin: 0 auto;
 `
 export const CourseList = styled.ul`
-  color: #eee;
+  color: ${Colors.TextPrimary};
   margin: 24px 0;
   padding: 0;
   list-style: none;
@@ -92,8 +91,8 @@ export const CourseTitle = styled.h3`
   font-family: ${Fonts.Secondary};
   font-style: normal;
   font-weight: 800;
-  font-size: 20px;
-  line-height: 22px;
+  font-size: 22px;
+  line-height: 24px;
   margin: 0 0 48px 0;
 `
 
@@ -106,8 +105,7 @@ export const CourseInfoList = styled.ul`
 export const CourseText = styled.p`
   font-family: ${Fonts.Primary};
   font-style: normal;
-  font-weight: ${props => props.weight || 300};
-  font-size: 16px;
+  font-weight: ${props => props.weight || 400};
   line-height: 1.6;
   text-align: center;
   display: block;
@@ -137,11 +135,11 @@ export const Overview = styled.section`
 export const OverviewTitle = styled.h3`
   font-family: ${Fonts.Secondary};
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 24px;
   line-height: 125.68%;
   text-align: center;
-  color: #eee;
+  color: ${Colors.TextPrimary};
   margin: 0 0 64px 0;
 `
 
@@ -166,7 +164,7 @@ export const OverviewImage = styled.img`
 export const OverviewInfoList = styled.ul`
   padding: 0;
   margin: 0;
-  color: #eee;
+  color: ${Colors.TextPrimary};
   align-self: center;
 `
 
@@ -190,11 +188,11 @@ export const LearningPath = styled.section`
 export const LearningPathTitle = styled.h3`
   font-family: ${Fonts.Secondary};
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 24px;
   line-height: 125.68%;
   text-align: center;
-  color: #eee;
+  color: ${Colors.TextPrimary};
   margin: 0 0 32px 0;
   ${media.greaterThan("medium")`
     margin-bottom: 80px;
@@ -207,7 +205,7 @@ export const LearningPathContainer = styled.div`
 `
 
 export const LearningPathList = styled.ul`
-  color: #eee;
+  color: ${Colors.TextPrimary};
   padding-left: 1rem;
   ${media.greaterThan("medium")`
     padding-left: 2rem;

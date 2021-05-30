@@ -4,4 +4,5 @@ export const Colors = {
   Secondary: "#FFC400",
   DarkViolet: "#150423",
   BlackPearl: "#081A2B",
+  TextPrimary: "#fff",
 }

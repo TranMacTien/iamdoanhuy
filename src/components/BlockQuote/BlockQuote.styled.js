@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-import { Fonts } from "@constants"
+import { Fonts, Colors } from "@constants"
 import ImageQuote from "images/quote.svg"
 
 export const Container = styled.section`
@@ -25,7 +25,7 @@ export const QuoteContent = styled.p`
   position: absolute;
   right: 10%;
   width: 48%;
-  color: white;
+  color: ${Colors.TextPrimary};
   height: 100%;
   margin: 0;
   top: 0;
@@ -44,5 +44,5 @@ export const QuoteCta = styled.p`
   font-weight: bold;
   font-size: 40px;
   line-height: 1.25;
-  color: white;
+  color: ${Colors.TextPrimary};
 `

@@ -1,13 +1,13 @@
 import styled from "styled-components"
 import media from "styled-media-query"
 
-import { Fonts } from "@constants"
+import { Fonts, Colors } from "@constants"
 
 export const Title = styled.h1`
   font-family: ${Fonts.Secondary};
   font-style: normal;
   font-weight: 800;
-  color: white;
+  color: ${Colors.TextPrimary};
   margin: 0;
   font-size: 48px;
   line-height: 1.3;
@@ -21,7 +21,7 @@ export const SubTitle = styled.h2`
   font-weight: 600;
   line-height: 1.5;
   margin: 32px 0 0;
-  color: white;
+  color: ${Colors.TextPrimary};
   max-width: 614px;
   font-size: 14px;
   ${media.greaterThan("medium")`
