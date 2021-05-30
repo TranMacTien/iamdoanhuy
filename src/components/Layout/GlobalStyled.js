@@ -18,7 +18,6 @@ export const GlobalStyled = createGlobalStyle`
     font-size: 18px;
     letter-spacing: 0.3px;
     font-size: 18px;
-    height: 100%;
     &.noscroll {
       overflow: hidden;
     }
