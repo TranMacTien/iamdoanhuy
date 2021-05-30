@@ -6,7 +6,7 @@ import SEO from "components/seo"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Trang chu" />
+    <SEO title="Trang chủ" />
     <PageIndex />
   </Layout>
 )
