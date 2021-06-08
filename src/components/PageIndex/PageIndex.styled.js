@@ -188,14 +188,12 @@ export const HomeBlockSecondaryDesc = styled.div`
 
 export const HomeBlockLeft = styled.div`
   ${media.greaterThan("medium")`
-    width: 50%;
     order: ${props => (props.type === "primary" ? 1 : 3)};
   `}
 `
 
 export const HomeBlockRight = styled.div`
   ${media.greaterThan("medium")`
-    width: 50%;
     order: 2;
   `}
 `
