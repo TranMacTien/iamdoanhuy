@@ -36,7 +36,7 @@ function HomeBlockSecondary({
               as="a"
               href={url}
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
             >
               {textLink}
             </Styled.HomeBlockSecondaryCTA>

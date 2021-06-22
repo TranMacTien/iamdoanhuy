@@ -6,18 +6,20 @@ import ImageYoutube from "images/logo-youtube.svg"
 import ImageFacebook from "images/logo-facebook.svg"
 import ImageInsta from "images/logo-insta.svg"
 import ImageHome from "images/home.jpeg"
+import { TIKTOK_CHANNEL, YOUTUBE_CHANNEL } from 'constants/urls';
+
 import * as Styled from "../PageIndex.styled"
 
 const IconSocial = [
   {
     name: "Tiktok",
     logo: ImageTiktok,
-    url: "https://www.tiktok.com/@iamdoanhuy",
+    url: TIKTOK_CHANNEL,
   },
   {
     name: "Youtube",
     logo: ImageYoutube,
-    url: "https://www.youtube.com/channel/UCitrOi2Xi4YbsYZ9PUfXuPg",
+    url: YOUTUBE_CHANNEL,
   },
   {
     name: "Facebook",

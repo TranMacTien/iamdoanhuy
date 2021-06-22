@@ -10,6 +10,7 @@ import ImageSpeedArt from "images/speed_art_2.jpeg"
 import ImageYoutube from "images/youtube_icon.png"
 import ImageTiktok from "images/tiktok_icon.png"
 import BlockQuote from "components/BlockQuote"
+import { TIKTOK_CHANNEL, YOUTUBE_CHANNEL } from 'constants/urls'
 
 import Intro from "./components/Intro"
 import HomeBlockSecondary from "./components/HomeBlockSecondary"
@@ -95,6 +96,7 @@ function PageIndex(props) {
         imageWidth={600}
         textLink="XEM VIDEO"
         type="secondary"
+        url={YOUTUBE_CHANNEL}
       />
       <div style={{ padding: "20px 0" }}>
         <HomeBlockSecondary
@@ -120,6 +122,7 @@ function PageIndex(props) {
             </>
           }
           textLink="XEM LIỀN"
+          url={TIKTOK_CHANNEL}
         />
       </div>
       <BlockQuote />
