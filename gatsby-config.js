@@ -28,7 +28,7 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-    `gatsby-plugin-gatsby-cloud`,
+    // `gatsby-plugin-gatsby-cloud`,
     {
       resolve: 'gatsby-alias-imports',
       options: {
@@ -53,12 +53,33 @@ module.exports = {
         // Add any options here
       },
     },
-    // {
-    //   resolve: `gatsby-plugin-layout`,
-    //   options: {
-    //     component: require.resolve(`${__dirname}/src/components/Layout/index`),
-    //   },
-    // },
+    {
+      resolve: `gatsby-source-datocms`,
+      options: {
+        // You can find your read-only API token under the Settings > API tokens
+        // section of your administrative area. Make sure to grant both CDA and CMA permissions.
+        apiToken: `f78e2dead3b838ed7ccf4acc7f02d5`,
+  
+        // The project environment to read from. Defaults to the primary environment:
+        environment: `main`,
+  
+        // If you are working on development/staging environment, you might want to
+        // preview the latest version of records instead of the published one:
+        previewMode: false,
+  
+        // Disable automatic reloading of content when some change occurs on DatoCMS:
+        disableLiveReload: false,
+  
+        // Custom API base URL (most don't need this)
+        // apiUrl: 'https://site-api.datocms.com',
+  
+        // Setup locale fallbacks
+        // In this example, if some field value is missing in Italian, fall back to English
+        localeFallbacks: {
+          it: ['en'],
+        },
+      },
+    },
     `gatsby-plugin-perf-budgets`,
     `gatsby-plugin-webpack-bundle-analyser-v2`,
     // {

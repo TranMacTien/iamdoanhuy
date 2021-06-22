@@ -1,14 +1,34 @@
 import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
 
 import Layout from "components/Layout"
 import PageArtwork from "components/PageArtwork"
 import SEO from "components/seo"
 
-const ArtworkPage = () => (
-  <Layout>
-    <SEO title="Artwork" />
-    <PageArtwork />
-  </Layout>
-)
+const ArtworkPage = () => {
+  const data = useStaticQuery(graphql`
+    query MyQuery {
+      allDatoCmsArtwork {
+        nodes {
+          image {
+            smartTags
+            colors {
+              hex
+            }
+            fluid {
+              ...GatsbyDatoCmsFluid_noBase64
+            }
+          }
+        }
+      }
+    }
+  `)
+  return (
+    <Layout>
+      <SEO title="Artwork" />
+      <PageArtwork data={data.allDatoCmsArtwork.nodes[0].image} />
+    </Layout>
+  )
+}
 
 export default ArtworkPage

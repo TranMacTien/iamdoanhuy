@@ -7,6 +7,7 @@
   "dependencies": {
     "gatsby": "^3.5.1",
     "gatsby-alias-imports": "^1.0.6",
+    "gatsby-image": "^3.7.1",
     "gatsby-plugin-gatsby-cloud": "^2.5.0",
     "gatsby-plugin-image": "^1.5.0",
     "gatsby-plugin-layout": "^2.5.0",
@@ -17,8 +18,9 @@
     "gatsby-plugin-remove-trailing-slashes": "^3.5.0",
     "gatsby-plugin-sharp": "^3.5.0",
     "gatsby-plugin-styled-components": "^4.5.0",
+    "gatsby-source-datocms": "^2.6.16",
     "gatsby-source-filesystem": "^3.5.0",
-    "gatsby-transformer-sharp": "^3.5.0",
+    "gatsby-transformer-sharp": "^3.7.1",
     "masonic": "^3.4.1",
     "normalize.css": "^8.0.1",
     "polished": "^4.1.2",
@@ -52,8 +54,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "preinstall": "npx npm-force-resolutions"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -61,10 +62,5 @@
   },
   "bugs": {
     "url": "https://github.com/TranMacTien/iamdoanhuy/issues"
-  },
-  "resolutions": {
-    "trim": "^0.0.3",
-    "browserslist": "^4.16.5",
-    "postcss": "^8.2.10"
   }
 }

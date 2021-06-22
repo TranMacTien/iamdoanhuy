@@ -2,19 +2,14 @@ import React from "react"
 import { Masonry } from "masonic"
 import { Parallax } from "react-parallax"
 import { useMedia } from "react-use"
+import GatsbyImage from "gatsby-image"
+import { darken } from "polished"
 
-import Image1 from "images/posters/BinDen.jpeg"
-import Image2 from "images/posters/hung_ba.jpeg"
 import ImageHomeBg3 from "images/home_bg_3.jpeg"
 
 import * as Styled from "./PageArtwork.styled"
 
-const LIST = Array.from(Array(200), () => ({
-  id: new Date().getTime(),
-  src: Math.round(Math.random() * 10) % 2 === 0 ? Image1 : Image2,
-}))
-
-function PageArtwork(props) {
+function PageArtwork({ data }) {
   const matchedTablet = useMedia("(min-width: 768px)")
   const COLUMN_SIZE = matchedTablet ? 300 : 160
   return (
@@ -36,13 +31,13 @@ function PageArtwork(props) {
       </Parallax>
       <Masonry
         // Provides the data for our grid items
-        items={LIST}
+        items={data}
         // Adds 8px of space between the grid cells
         columnGutter={8}
         // Sets the minimum column width to 172px
         columnWidth={COLUMN_SIZE}
         // Pre-renders 5 windows worth of content
-        overscanBy={3}
+        overscanBy={10}
         // This is the grid item component
         render={Item}
       ></Masonry>
@@ -50,11 +45,14 @@ function PageArtwork(props) {
   )
 }
 
-const Item = ({ data: { id, src } }) => {
+const Item = ({ data: { smartTags, fluid, colors } }) => {
+  const bgColor = darken(0.18, colors[3].hex)
   return (
-    <div>
-      <img src={src} alt="" style={{ width: "100%" }} />
-    </div>
+    <GatsbyImage
+      fluid={fluid}
+      backgroundColor={bgColor}
+      alt={smartTags.join(", ")}
+    />
   )
 }
 
