@@ -18,8 +18,8 @@ export const Title = styled.h1`
 
 export const SubTitle = styled.h2`
   font-style: normal;
-  font-weight: 600;
-  line-height: 1.5;
+  font-weight: 400;
+  line-height: 1.6;
   margin: 32px 0 0;
   color: ${Colors.TextPrimary};
   max-width: 614px;

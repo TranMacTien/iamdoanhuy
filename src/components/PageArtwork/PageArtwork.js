@@ -1,4 +1,4 @@
-import React from "react"
+import React, { memo } from "react"
 import { Masonry } from "masonic"
 import { Parallax } from "react-parallax"
 import { useMedia } from "react-use"
@@ -29,24 +29,26 @@ function PageArtwork({ data }) {
           </section>
         </Styled.Container>
       </Parallax>
-      <Masonry
-        // Provides the data for our grid items
-        items={data}
-        // Adds 8px of space between the grid cells
-        columnGutter={8}
-        // Sets the minimum column width to 172px
-        columnWidth={COLUMN_SIZE}
-        // Pre-renders 5 windows worth of content
-        overscanBy={10}
-        // This is the grid item component
-        render={Item}
-      ></Masonry>
+      <div style={{ paddingTop: 8 }}>
+        <Masonry
+          // Provides the data for our grid items
+          items={data}
+          // Adds 8px of space between the grid cells
+          columnGutter={8}
+          // Sets the minimum column width to 172px
+          columnWidth={COLUMN_SIZE}
+          // Pre-renders 5 windows worth of content
+          overscanBy={10}
+          // This is the grid item component
+          render={Item}
+        ></Masonry>
+      </div>
     </>
   )
 }
 
-const Item = ({ data: { smartTags, fluid, colors } }) => {
-  const bgColor = darken(0.18, colors[3].hex)
+const Item = memo(({ data: { smartTags, fluid, colors } }) => {
+  const bgColor = darken(0.18, colors[3]?.hex || colors[0]?.hex)
   return (
     <GatsbyImage
       fluid={fluid}
@@ -54,6 +56,6 @@ const Item = ({ data: { smartTags, fluid, colors } }) => {
       alt={smartTags.join(", ")}
     />
   )
-}
+})
 
 export default PageArtwork

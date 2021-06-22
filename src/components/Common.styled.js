@@ -1,7 +1,6 @@
 import styled from "styled-components"
 import { darken } from "polished"
-import { Colors } from "@constants"
-import { Fonts } from "@constants"
+import { Colors, Fonts } from "@constants"
 
 export const SectionTitle = styled.h2`
   margin: 0 0 ${props => props.marginBottom || 0} 0;

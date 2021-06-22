@@ -179,7 +179,7 @@ export const HomeBlockSecondaryDesc = styled.div`
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    line-height: 1.5;
+    line-height: 1.6;
     color: ${Colors.TextPrimary};
     margin: 0 0 1rem 0;
     max-width: 550px;

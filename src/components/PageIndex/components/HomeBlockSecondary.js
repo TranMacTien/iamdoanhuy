@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import { Parallax } from "react-parallax"
 
 import * as Styled from "../PageIndex.styled"
@@ -12,6 +13,7 @@ function HomeBlockSecondary({
   type,
   background,
   imageWidth,
+  to,
 }) {
   return (
     <Parallax bgImage={background} strength={600}>
@@ -33,8 +35,9 @@ function HomeBlockSecondary({
             </Styled.HomeBlockSecondaryDesc>
 
             <Styled.HomeBlockSecondaryCTA
-              as="a"
+              as={to ? Link : "a"}
               href={url}
+              to={to}
               target="_blank"
               rel="noopener noreferrer"
             >
