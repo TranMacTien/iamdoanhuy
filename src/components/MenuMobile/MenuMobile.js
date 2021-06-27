@@ -1,21 +1,13 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import { Link } from "gatsby"
 
+import { useDisableBodyScroll } from "hooks/useDisableBodyScroll"
 import * as Styled from "./MenuMobile.styled"
 
 function MenuMobile(props) {
   const [open, setOpen] = useState(false)
 
-  useEffect(() => {
-    if (open) {
-      document.body.classList.add("noscroll")
-    } else {
-      document.body.classList.remove("noscroll")
-    }
-    return () => {
-      document.body.classList.remove("noscroll")
-    }
-  }, [open])
+  useDisableBodyScroll(open)
 
   return (
     <Styled.Container>

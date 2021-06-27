@@ -9,30 +9,26 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import "normalize.css"
-import 'swiper/swiper-bundle.min.css';
-
+import "../../assets/css/font.css"
 import { GlobalStyled } from "./GlobalStyled"
-// import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "components/Header"
 import Footer from "components/Footer"
+require("swiper/swiper.min.css")
+require("swiper/components/pagination/pagination.min.css")
+require("swiper/components/navigation/navigation.min.css")
+require("swiper/components/effect-fade/effect-fade.min.css")
 
 const Layout = ({ children }) => {
-  /*  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `) */
-
   return (
     <>
       <Helmet>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
-        <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin />
+        <link
+          rel="preconnect"
+          href="https://fonts.googleapis.com"
+          crossOrigin
+        />
         <link
           href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
           rel="stylesheet"

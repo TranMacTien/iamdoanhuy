@@ -11,10 +11,11 @@ const ArtworkPage = () => {
       allDatoCmsArtwork {
         nodes {
           image {
-            smartTags
             colors {
               hex
             }
+            url
+            title
             fluid {
               ...GatsbyDatoCmsFluid_noBase64
             }

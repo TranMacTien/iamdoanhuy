@@ -1,11 +1,12 @@
 import { createGlobalStyle } from "styled-components"
 import { Fonts } from "@constants/Fonts"
+import { Colors } from 'constants'
 
 export const GlobalStyled = createGlobalStyle`
   * {
     box-sizing: border-box;
   }
-  html, body {
+  body {
     font-family: ${Fonts.Primary};
     margin: 0;
     padding: 0;
@@ -22,7 +23,29 @@ export const GlobalStyled = createGlobalStyle`
       overflow: hidden;
     }
   }
+
   .react-parallax-bgimage {
     will-change: transform;
+  }
+
+  .ReactModal__Overlay {
+    opacity: 0;
+    transition: all 600ms ease-in-out;
+  }
+
+  .ReactModal__Overlay--after-open {
+    opacity: 1;
+  }
+
+  .ReactModal__Overlay--before-close {
+    opacity: 0;
+  }
+
+  .swiper-button-prev, .swiper-button-next {
+    color: black;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: black;
   }
 `
