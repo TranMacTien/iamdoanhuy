@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import media from "styled-media-query"
+import { rgba } from "polished"
 
 import { Fonts, Colors } from "@constants"
 
@@ -45,5 +46,33 @@ export const Container = styled.div`
     height: 100%;
     z-index: 0;
     background-color: rgb(23 0 31 / 60%);
+  }
+`
+export const SliderImageWrapper = styled.div`
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transition: all 0.6s ease;
+    z-index: 2;
+    display: block;
+  }
+  .gatsby-image-wrapper {
+    transition: all 0.6s ease;
+    will-change: transform;
+  }
+  &:hover {
+    &:after {
+      background: ${rgba(Colors.Primary, 0.6)};
+    }
+    .gatsby-image-wrapper {
+      transform: scale3d(1.05, 1.05, 1);
+    }
   }
 `

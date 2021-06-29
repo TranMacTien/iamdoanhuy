@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components"
 import media from "styled-media-query"
+import { rgba } from "polished"
 
 import { ButtonBase } from "components/Common.styled"
 import { Fonts, Colors } from "@constants"
@@ -216,16 +217,29 @@ export const SliderContainer = styled.div`
 
 export const SliderImageWrapper = styled.div`
   position: relative;
-  height: 0;
-  padding-bottom: 100%;
-`
-
-export const SliderImage = styled.img`
-  position: absolute;
-  width: 100%;
-  display: block;
-  top: 0;
-  left: 0;
-  height: 100%;
-  object-fit: cover;
+  cursor: pointer;
+  overflow: hidden;
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transition: all 0.6s ease;
+    z-index: 2;
+    display: block;
+  }
+  .gatsby-image-wrapper {
+    transition: all 0.6s ease;
+    will-change: transform;
+  }
+  &:hover {
+    &:after {
+      background: ${rgba(Colors.Primary, 0.6)};
+    }
+    .gatsby-image-wrapper {
+      transform: scale3d(1.05, 1.05, 1);
+    }
+  }
 `

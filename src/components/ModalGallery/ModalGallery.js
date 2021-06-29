@@ -13,6 +13,7 @@ import Icomoon from "components/Icomoon"
 
 import ImageContainer from "./ImageContainer"
 import * as Styled from "./ModalGallery.styled"
+import { useFullscreenEvent } from "./hooks/useFullscreenEvent"
 
 // install Swiper modules
 SwiperCore.use([EffectFade, Pagination, Navigation, Virtual])
@@ -52,7 +53,7 @@ function ModalGallery({ closeModal, image: imageId, data }) {
     ...data.slice(0, imageId - 1),
   ]
   const contentRef = useRef()
-  const [isFullscreen, setFullscreen] = useToggle(false)
+  const [isFullscreen, setFullscreen] = useState(false)
 
   const onSlideChange = swiper => {
     setSlideIndex(swiper.activeIndex)
@@ -64,16 +65,13 @@ function ModalGallery({ closeModal, image: imageId, data }) {
     }
   }
 
-  useEffect(() => {
-    if (isFullscreen) {
-      document.body.requestFullscreen()
-    } else {
-      exitFullScreen()
-    }
-    return () => {
-      exitFullScreen()
-    }
-  }, [isFullscreen])
+  const requestFullscreen = () => {
+    document.body.requestFullscreen()
+  }
+
+  useEffect(() => () => exitFullScreen(), [])
+
+  useFullscreenEvent(setFullscreen)
 
   return (
     <Modal
@@ -83,14 +81,19 @@ function ModalGallery({ closeModal, image: imageId, data }) {
       style={modalStyles}
     >
       <Styled.ContentContainer ref={contentRef} fullscreen={isFullscreen}>
-        <Styled.ButtonFullscreen onClick={setFullscreen}>
-          <Icomoon name={isFullscreen ? "collapse" : "expand"} size={32}></Icomoon>
+        <Styled.ButtonFullscreen onClick={isFullscreen ? exitFullScreen : requestFullscreen}>
+          <Icomoon
+            name={isFullscreen ? "collapse" : "expand"}
+            size={32}
+          ></Icomoon>
         </Styled.ButtonFullscreen>
         <Styled.ButtonClose onClick={closeModal}>
           <Icomoon name="delete-x" size={32}></Icomoon>
         </Styled.ButtonClose>
         {!isFullscreen && (
-          <Styled.Title>{dataTransformed[slideIndex]?.title?.toUpperCase()}</Styled.Title>
+          <Styled.Title>
+            {dataTransformed[slideIndex]?.title?.toUpperCase()}
+          </Styled.Title>
         )}
 
         <Swiper
@@ -117,4 +120,4 @@ function ModalGallery({ closeModal, image: imageId, data }) {
   )
 }
 
-export default ModalGallery
+export default React.memo(ModalGallery)

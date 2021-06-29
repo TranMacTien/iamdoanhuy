@@ -1,8 +1,10 @@
 import React from "react"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { useWindowSize } from "react-use"
+import GatsbyImage from "gatsby-image"
+import { darken } from "polished"
+import { navigate } from "gatsby"
 
-import ImageHungBa from "images/posters/hung_ba.jpeg"
 import ImagePhotoshop from "images/photoshop_icon.png"
 import ImageHomeBg from "images/home_bg.jpeg"
 import ImageHomeBg2 from "images/home_bg_2.jpeg"
@@ -10,7 +12,7 @@ import ImageSpeedArt from "images/speed_art_2.jpeg"
 import ImageYoutube from "images/youtube_icon.png"
 import ImageTiktok from "images/tiktok_icon.png"
 import BlockQuote from "components/BlockQuote"
-import { TIKTOK_CHANNEL, YOUTUBE_CHANNEL } from 'constants/urls'
+import { TIKTOK_CHANNEL, YOUTUBE_CHANNEL } from "constants/urls"
 
 import Intro from "./components/Intro"
 import HomeBlockSecondary from "./components/HomeBlockSecondary"
@@ -19,6 +21,7 @@ import * as Styled from "./PageIndex.styled"
 const MAX_SLIDE_WIDTH = 300
 
 function PageIndex(props) {
+  const { data } = props
   const { width } = useWindowSize()
   const slidesPerView = Math.floor(width / MAX_SLIDE_WIDTH)
   return (
@@ -56,16 +59,23 @@ function PageIndex(props) {
           loop
           spaceBetween={20}
           slidesPerView={slidesPerView}
-          grabCursor={true}
           autoplay={{
             delay: 2500,
             disableOnInteraction: false,
           }}
         >
-          {new Array(10).fill(0).map((el, index) => (
+          {data.map(({ fluid, colors, title }, index) => (
             <SwiperSlide key={index}>
-              <Styled.SliderImageWrapper>
-                <Styled.SliderImage src={ImageHungBa} alt="" />
+              <Styled.SliderImageWrapper onClick={() => navigate("/artwork")}>
+                <GatsbyImage
+                  fluid={fluid}
+                  backgroundColor={darken(
+                    0.18,
+                    colors[3]?.hex || colors[0]?.hex
+                  )}
+                  alt={title}
+                  style={{ cursor: "pointer" }}
+                />
               </Styled.SliderImageWrapper>
             </SwiperSlide>
           ))}

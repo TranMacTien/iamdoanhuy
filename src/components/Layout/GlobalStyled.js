@@ -48,4 +48,8 @@ export const GlobalStyled = createGlobalStyle`
   .swiper-pagination-bullet-active {
     background: black;
   }
+
+  .swiper-slide {
+    will-change: opacity, transform;
+  }
 `

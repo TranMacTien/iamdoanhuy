@@ -7,7 +7,7 @@ import SEO from "components/seo"
 
 const ArtworkPage = () => {
   const data = useStaticQuery(graphql`
-    query MyQuery {
+    query allDatoCmsArtworkQuery {
       allDatoCmsArtwork {
         nodes {
           image {

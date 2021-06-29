@@ -76,14 +76,14 @@ function PageArtwork({ data }) {
 
 const Item = memo(({ data: { fluid, bgColor, title, onClick, id } }) => {
   return (
-    <div onClick={useCallback(() => onClick(id), [id])}>
+    <Styled.SliderImageWrapper onClick={useCallback(() => onClick(id), [id])}>
       <GatsbyImage
         fluid={fluid}
         backgroundColor={bgColor}
         alt={title}
         style={{ cursor: "pointer" }}
       />
-    </div>
+    </Styled.SliderImageWrapper>
   )
 })
 

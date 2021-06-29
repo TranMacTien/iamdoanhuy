@@ -1,11 +1,16 @@
 import React, { useEffect, useRef, useState } from "react"
 import { useWindowSize } from "react-use"
 import GatsbyImage from "gatsby-image"
+import { useDebounce } from "use-debounce"
 
 import * as Styled from "./ModalGallery.styled"
 
+const DEBOUNCE_TIME = 300
+
 function ImageContainer({ item, fullscreen }) {
   const { height, width } = useWindowSize()
+  const [widthDebounced] = useDebounce(width, DEBOUNCE_TIME)
+  const [heightDebounced] = useDebounce(height, DEBOUNCE_TIME)
   const [sizes, setSizes] = useState({
     width: 0,
     height: 0,
@@ -26,14 +31,14 @@ function ImageContainer({ item, fullscreen }) {
     const paddingBottom = getOuterCss("padding-bottom")
     const containerWidth =
       outerRef.current.clientWidth - parseInt(paddingLeft) * 2
-    const containerHeight = height - top * 2 - parseInt(paddingBottom)
+    const containerHeight = heightDebounced - top * 2 - parseInt(paddingBottom)
     const imageStyles = getImageStyles({
       width: containerWidth,
       height: containerHeight,
       imageRatio: item.fluid.aspectRatio,
     })
     setSizes(imageStyles)
-  }, [height, width, fullscreen])
+  }, [heightDebounced, widthDebounced, fullscreen])
 
   return (
     <Styled.ImageOuter fullscreen={fullscreen} ref={outerRef}>
