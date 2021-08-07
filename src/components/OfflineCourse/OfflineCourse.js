@@ -62,7 +62,7 @@ function OfflineCourse(props) {
                 ) : (
                   <Styled.CTA
                     as="a"
-                    href="https://www.messenger.com/t/iamdoanhuyy/"
+                    href="https://www.messenger.com/t/doanhuyposter/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
