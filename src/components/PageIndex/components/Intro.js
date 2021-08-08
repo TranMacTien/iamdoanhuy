@@ -24,7 +24,7 @@ const IconSocial = [
   {
     name: "Facebook",
     logo: ImageFacebook,
-    url: "https://www.facebook.com/iamdoanhuyy",
+    url: "https://www.facebook.com/doanhuyposter",
   },
   {
     name: "Instagram",
@@ -46,7 +46,7 @@ function Intro(props) {
     <Parallax bgImage={ImageHome} strength={250}>
       <Styled.IntroContainer>
         <div>
-          <Styled.IntroTitle>- Iamdoanhuy -</Styled.IntroTitle>
+          <Styled.IntroTitle>- Huyposter -</Styled.IntroTitle>
           <Styled.IntroSlogan>
             <span>Create</span>
             <br />

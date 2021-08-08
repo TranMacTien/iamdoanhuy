@@ -22,7 +22,7 @@ function Footer(props) {
               </a>
             </li>
             <li>
-              <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/iamdoanhuyy">
+              <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/doanhuyposter">
                 <img src={LogoFacebook} alt="facebook" />
               </a>
             </li>
@@ -44,6 +44,9 @@ function Footer(props) {
             <Styled.FooterListItem>
               <Link to="/khoa-hoc">Khoá học</Link>
             </Styled.FooterListItem>
+            <Styled.FooterListItem>
+              <Link to="/khoa-hoc-online">Khoá học Online</Link>
+            </Styled.FooterListItem>
           </Styled.FooterList>
         </div>
         <div>
@@ -61,7 +64,7 @@ function Footer(props) {
         </div>
       </Styled.SectionTop>
       <p style={{ color: "white", margin: 0, textAlign: "center" }}>
-        ©{new Date().getFullYear()} Iamdoanhuy
+        ©{new Date().getFullYear()} Huy Poster
       </p>
     </Styled.Container>
   )

@@ -4,6 +4,7 @@ import { Parallax } from "react-parallax"
 import ImageHomeBg3 from "images/bg_khoa_hoc.jpg"
 import ImagePhotoshop from "images/photoshop_icon.png"
 import IconCheck from "images/check.svg"
+import { MESSENGER } from 'constants/urls'
 import { COURSE } from "./data"
 import * as Styled from "./Course.styled"
 
@@ -62,7 +63,7 @@ function Course(props) {
                 ) : (
                   <Styled.CTA
                     as="a"
-                    href="https://www.messenger.com/t/doanhuyposter/"
+                    href={MESSENGER}
                     target="_blank"
                     rel="noopener noreferrer"
                   >

@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { rgba } from "polished"
 
-import { Colors } from "@constants"
+import { Colors, Fonts } from "@constants"
 
 export const Container = styled.div`
   background: ${Colors.Haity};
@@ -24,8 +24,7 @@ export const PosterTextBg = styled.div`
   z-index: 1;
   user-select: none;
   top: 90px;
-  left: 0;
-  opacity: 0.5;
+  left: 16px;
 `
 
 export const PhotoshopTextBg = styled.div`
@@ -35,7 +34,6 @@ export const PhotoshopTextBg = styled.div`
   user-select: none;
   bottom: 90px;
   right: 16px;
-  opacity: 0.5;
 `
 
 export const IntroLeft = styled.div`
@@ -58,26 +56,26 @@ export const Avatar = styled.div`
 `
 
 export const Square = styled.div`
-  width: ${props => props.size}px;
-  height: ${props => props.size}px;
+  width: ${props => props.size};
+  height: ${props => props.size};
   border: 4px solid ${props => props.borderColor || "#5087f7"};
   border-radius: 4px;
   background: ${rgba("white", 0.08)};
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(4px);
 `
 
 export const Circle = styled.div`
-  width: ${props => props.size}px;
-  height: ${props => props.size}px;
+  width: ${props => props.size};
+  height: ${props => props.size};
   border: 4px solid #e6606c;
   border-radius: 999px;
   background: ${rgba("white", 0.08)};
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(4px);
 `
 
 export const SquareGradient = styled.div`
-  width: ${props => props.size}px;
-  height: ${props => props.size}px;
+  width: ${props => props.size};
+  height: ${props => props.size};
   background: linear-gradient(270deg, #6357f6 0%, #e6606c 100%),
     linear-gradient(180deg, #4d4f95 0%, #2b2d66 100%);
   box-sizing: border-box;
@@ -87,8 +85,8 @@ export const SquareGradient = styled.div`
 
 export const PlusFilled = styled.div`
   position: relative;
-  width: ${props => props.size}px;
-  height: ${props => props.size}px;
+  width: ${props => props.size};
+  height: ${props => props.size};
   &:before,
   &:after {
     content: "";
@@ -108,7 +106,21 @@ export const PlusFilled = styled.div`
   }
 `
 
-export const PartialWrapper = styled.div`
-  width: 100%;
-  height: 100%;
+export const CTABlock = styled.div`
+  margin-left: 20%;
+  display: inline-block;
+`
+
+export const Pricing = styled.p`
+  font-size: 18px;
+  color: white;
+  font-family: ${Fonts.Secondary};
+  del {
+    font-weight: 300;
+    opacity: 0.6;
+    font-size: 80%;
+  }
+  span {
+    font-weight: 700;
+  }
 `
