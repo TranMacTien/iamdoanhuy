@@ -275,7 +275,7 @@ function animeCta() {
     opacity: [0, 1],
     translateZ: 0,
     // easing: "easeInOutExpo",
-    delay: 1200,
+    delay: 1500,
     duration: 600,
   })
 }
