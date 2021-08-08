@@ -46,6 +46,9 @@ export const IntroRight = styled.div`
   display: flex;
   justify-content: center;
   position: relative;
+  [class^="anime-intro"] {
+    opacity: 0;
+  }
 `
 
 export const Avatar = styled.div`

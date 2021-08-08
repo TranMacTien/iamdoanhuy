@@ -32,6 +32,7 @@ function OnlineCourse(props) {
               width="100%"
               alt="POSTER"
               className="poster-text"
+              style={{ opacity: 0 }}
             />
           </Styled.PosterTextBg>
           <Styled.PhotoshopTextBg>
@@ -39,6 +40,7 @@ function OnlineCourse(props) {
               src={ImagePhotoshopText}
               alt="PHOTOSHOP"
               className="pts-text"
+              style={{ opacity: 0 }}
               width="100%"
             />
           </Styled.PhotoshopTextBg>
@@ -46,25 +48,30 @@ function OnlineCourse(props) {
         <Styled.IntroLeft>
           <img
             src={ImageMainSubTitle}
-            style={{ width: "40%", marginBottom: 16 }}
+            style={{ width: "40%", marginBottom: 16, opacity: 0 }}
             alt="Khoá học Online"
             className="intro-1"
           />
           <h1 style={{ margin: 0 }}>
             <img
               src={ImageTitle}
-              style={{ width: "100%", marginBottom: 24 }}
+              style={{ width: "100%", marginBottom: 24, opacity: 0 }}
               alt="Thiết kế Poster với Photoshop"
               className="intro-2"
             />
           </h1>
           <img
             src={ImageSubTitle}
-            style={{ width: "60%", marginLeft: "20%", marginBottom: 54 }}
+            style={{
+              width: "60%",
+              marginLeft: "20%",
+              marginBottom: 54,
+              opacity: 0,
+            }}
             alt="Dành cho người mới bắt đầu"
             className="intro-3"
           />
-          <Styled.CTABlock className="anime-pricing">
+          <Styled.CTABlock className="anime-pricing" style={{ opacity: 0 }}>
             <Styled.Pricing>
               <del>899.000 đ</del> <span>399.000 đ</span>
             </Styled.Pricing>
