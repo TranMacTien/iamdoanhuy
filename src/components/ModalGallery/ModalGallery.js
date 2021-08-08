@@ -7,7 +7,6 @@ import SwiperCore, {
   Virtual,
   EffectFade,
 } from "swiper/core"
-import { useFullscreen, useToggle } from "react-use"
 
 import Icomoon from "components/Icomoon"
 

@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "author": "tientranmac96@gmail.com>",
   "dependencies": {
-    "@react-spring/web": "^9.2.3",
+    "animejs": "^3.2.1",
     "gatsby": "^3.5.1",
     "gatsby-alias-imports": "^1.0.6",
     "gatsby-image": "^3.7.1",
@@ -25,6 +25,7 @@
     "gatsby-transformer-sharp": "^3.7.1",
     "masonic": "^3.4.1",
     "normalize.css": "^8.0.1",
+    "parallax-js": "^3.1.0",
     "polished": "^4.1.2",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",

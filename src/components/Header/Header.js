@@ -21,6 +21,9 @@ function Header(props) {
             <Link activeClassName="active" to="/">Trang chủ</Link>
           </li>
           <li>
+            <Link activeClassName="active" to="/khoa-hoc-online">Khoá học Online</Link>
+          </li>
+          <li>
             <Link activeClassName="active" to="/khoa-hoc">Khoá học</Link>
           </li>
           <li>

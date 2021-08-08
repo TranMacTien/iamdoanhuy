@@ -5,9 +5,9 @@ import ImageHomeBg3 from "images/bg_khoa_hoc.jpg"
 import ImagePhotoshop from "images/photoshop_icon.png"
 import IconCheck from "images/check.svg"
 import { COURSE } from "./data"
-import * as Styled from "./OfflineCourse.styled"
+import * as Styled from "./Course.styled"
 
-function OfflineCourse(props) {
+function Course(props) {
   return (
     <div>
       <Parallax bgImage={ImageHomeBg3} strength={600}>
@@ -158,4 +158,4 @@ function OfflineCourse(props) {
   )
 }
 
-export default OfflineCourse
+export default Course

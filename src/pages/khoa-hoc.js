@@ -2,13 +2,13 @@ import * as React from "react"
 
 import Layout from "components/Layout"
 import SEO from "components/seo"
-import OfflineCourse from 'components/OfflineCourse'
+import Course from 'components/Course'
 
-const OfflineCoursePage = () => (
+const CoursePage = () => (
   <Layout>
     <SEO title="Khoá học" />
-    <OfflineCourse />
+    <Course />
   </Layout>
 )
 
-export default OfflineCoursePage
+export default CoursePage
