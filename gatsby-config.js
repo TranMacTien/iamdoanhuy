@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Huy Poster`,
-    description: `Yeu Du Thu, Thich Design`,
+    description: `Yêu Đủ Thứ, Thích Design`,
     author: `tientranmac96`,
   },
   plugins: [

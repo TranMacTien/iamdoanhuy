@@ -7,7 +7,7 @@ export default function HTML(props) {
       <head>
         <meta charSet="utf-8" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-        <meta name="google-site-verification" content="zN-_5pz0csHT_8MWWw5kAKhbYYNopEWVw5cfh02ZHDs" />
+        <meta name="google-site-verification" content="673mUEEgiD3ny-QRQ0RdAUNkkL069BPL0UkEl7Ew1DA" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
