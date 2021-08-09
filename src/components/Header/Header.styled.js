@@ -14,7 +14,8 @@ export const StyledContainer = styled.div`
   z-index: 2;
   padding: 0 6vw;
   height: 60px;
-  ${media.greaterThan("medium")`
+  z-index: 100;
+  ${media.greaterThan("large")`
     height: 90px;
   `}
 `
@@ -22,7 +23,7 @@ export const StyledContainer = styled.div`
 export const StyledLogoContainer = styled.div`
   img {
     width: 120px;
-    ${media.greaterThan("medium")`
+    ${media.greaterThan("large")`
       width: 160px;
   `}
   }
@@ -30,7 +31,7 @@ export const StyledLogoContainer = styled.div`
 
 export const StyledMenuContainer = styled.div`
   display: none;
-  ${media.greaterThan("medium")`
+  ${media.greaterThan("large")`
     display: flex;
     align-items: center;
     ul {

@@ -4,7 +4,7 @@ import media from 'styled-media-query'
 import { Colors, Fonts } from "@constants"
 
 export const Container = styled.div`
-  ${media.greaterThan("medium")`
+  ${media.greaterThan("large")`
     display: none;
   `}
 `
@@ -44,6 +44,7 @@ export const Menu = styled.div`
   justify-content: center;
   align-items: center;
   transition: all 0.3s ease-in-out;
+  z-index: 100;
 `
 
 export const MenuList = styled.ul`

@@ -9,6 +9,7 @@ import ImageTitle from "images/khoa-hoc-online-text-2.png"
 import ImageSubTitle from "images/khoa-hoc-online-text-3.svg"
 import ImageTriangle from "images/partials/triangle.svg"
 import ImagePlus from "images/partials/plus.svg"
+import ImagePhotoshopGradient from "images/partials/photoshop.png"
 import { ButtonBase } from "components/Common.styled"
 import { MESSENGER } from "constants/urls"
 
@@ -45,41 +46,6 @@ function OnlineCourse(props) {
             />
           </Styled.PhotoshopTextBg>
         </div>
-        <Styled.IntroLeft>
-          <img
-            src={ImageMainSubTitle}
-            style={{ width: "40%", marginBottom: 16, opacity: 0 }}
-            alt="Khoá học Online"
-            className="intro-1"
-          />
-          <h1 style={{ margin: 0 }}>
-            <img
-              src={ImageTitle}
-              style={{ width: "100%", marginBottom: 24, opacity: 0 }}
-              alt="Thiết kế Poster với Photoshop"
-              className="intro-2"
-            />
-          </h1>
-          <img
-            src={ImageSubTitle}
-            style={{
-              width: "60%",
-              marginLeft: "20%",
-              marginBottom: 54,
-              opacity: 0,
-            }}
-            alt="Dành cho người mới bắt đầu"
-            className="intro-3"
-          />
-          <Styled.CTABlock className="anime-pricing" style={{ opacity: 0 }}>
-            <Styled.Pricing>
-              <del>899.000 đ</del> <span>399.000 đ</span>
-            </Styled.Pricing>
-            <ButtonBase as="a" href={MESSENGER} target="_blank">
-              ĐĂNG KÍ NGAY
-            </ButtonBase>
-          </Styled.CTABlock>
-        </Styled.IntroLeft>
         <Styled.IntroRight>
           <Styled.Avatar ref={scene} data-relative-input="true">
             <img src={ImageAvatar} alt="Huy Poster" />
@@ -97,6 +63,34 @@ function OnlineCourse(props) {
             ))}
           </Styled.Avatar>
         </Styled.IntroRight>
+        <Styled.IntroLeft>
+          <Styled.MainSubTitle
+            src={ImageMainSubTitle}
+            alt="Khoá học Online"
+            className="intro-1"
+          />
+          <h1 style={{ margin: 0 }}>
+            <img
+              src={ImageTitle}
+              style={{ width: "100%", marginBottom: 24, opacity: 0 }}
+              alt="Thiết kế Poster với Photoshop"
+              className="intro-2"
+            />
+          </h1>
+          <Styled.SubTitle
+            src={ImageSubTitle}
+            alt="Dành cho người mới bắt đầu"
+            className="intro-3"
+          />
+          <Styled.CTABlock className="anime-pricing" style={{ opacity: 0 }}>
+            <Styled.Pricing>
+              <del>899.000 đ</del> <span>399.000 đ</span>
+            </Styled.Pricing>
+            <ButtonBase as="a" href={MESSENGER} target="_blank">
+              ĐĂNG KÍ NGAY
+            </ButtonBase>
+          </Styled.CTABlock>
+        </Styled.IntroLeft>
       </Styled.Header>
     </Styled.Container>
   )
@@ -107,8 +101,8 @@ function getPartials() {
     {
       element: props => (
         <Styled.SquareGradient
+          src={ImagePhotoshopGradient}
           className="anime-avatar-1"
-          size="6vw"
           {...props}
         />
       ),
@@ -119,7 +113,15 @@ function getPartials() {
     },
     {
       element: props => (
-        <Styled.Square className="anime-avatar-1" size="4vw" {...props} />
+        <Styled.Square
+          className="anime-avatar-1"
+          size={{
+            sm: "8vw",
+            md: "4vw",
+            lg: "4vw",
+          }}
+          {...props}
+        />
       ),
       style: {
         top: "24%",
@@ -132,7 +134,11 @@ function getPartials() {
         <Styled.Square
           className="anime-avatar-1"
           borderColor="#ad47bf"
-          size="1vw"
+          size={{
+            sm: "4vw",
+            md: "2vw",
+            lg: "1vw",
+          }}
           {...props}
         />
       ),
@@ -144,7 +150,15 @@ function getPartials() {
     },
     {
       element: props => (
-        <Styled.Circle className="anime-avatar-2" size="4.4vw" {...props} />
+        <Styled.Circle
+          className="anime-avatar-2"
+          size={{
+            sm: "12vw",
+            md: "4.4vw",
+            lg: "4.4vw",
+          }}
+          {...props}
+        />
       ),
       style: {
         top: "3%",
@@ -153,7 +167,15 @@ function getPartials() {
     },
     {
       element: props => (
-        <Styled.PlusFilled className="anime-avatar-2" size="3vw" {...props} />
+        <Styled.PlusFilled
+          className="anime-avatar-2"
+          size={{
+            sm: "6vw",
+            md: "3vw",
+            lg: "3vw",
+          }}
+          {...props}
+        />
       ),
       style: {
         bottom: "15%",
@@ -163,9 +185,8 @@ function getPartials() {
     },
     {
       element: props => (
-        <img
+        <Styled.PartialTriangle
           src={ImageTriangle}
-          style={{ width: "3vw" }}
           alt="triangle"
           {...props}
           className="anime-avatar-1"
@@ -179,10 +200,9 @@ function getPartials() {
     },
     {
       element: props => (
-        <img
+        <Styled.PartialPlus
           className="anime-avatar-3"
           src={ImagePlus}
-          style={{ width: "1.5vw" }}
           alt="plus"
           {...props}
         />
@@ -195,7 +215,15 @@ function getPartials() {
     },
     {
       element: props => (
-        <Styled.Circle className="anime-avatar-3" size="1.4vw" {...props} />
+        <Styled.Circle
+          className="anime-avatar-3"
+          size={{
+            sm: "4vw",
+            md: "1.4vw",
+            lg: "1.4vw",
+          }}
+          {...props}
+        />
       ),
       style: {
         bottom: "0%",
