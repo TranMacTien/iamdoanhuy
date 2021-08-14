@@ -5,5 +5,5 @@ export const Colors = {
   DarkViolet: "#150423",
   BlackPearl: "#081A2B",
   TextPrimary: "#fff",
-  Haity: "#0C0821",
+  Haity: "#181844",
 }

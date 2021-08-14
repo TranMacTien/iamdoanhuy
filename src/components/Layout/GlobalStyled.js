@@ -12,11 +12,11 @@ export const GlobalStyled = createGlobalStyle`
     padding: 0;
     max-width: 100%;
     overflow-x: hidden;
-    font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: 100%;
     font-weight: 400;
     background: black;
-    font-size: 18px;
     letter-spacing: 0.3px;
     font-size: 18px;
     &.noscroll {

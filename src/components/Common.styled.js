@@ -80,3 +80,8 @@ export const ButtonBase = styled.button`
     pointer-events: none;
   }
 `
+
+export const Center = styled.div`
+  display: flex;
+  justify-content: center;
+`

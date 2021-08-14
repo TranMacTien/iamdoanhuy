@@ -13,6 +13,9 @@ import ImagePhotoshopGradient from "images/partials/photoshop.png"
 import { ButtonBase } from "components/Common.styled"
 import { MESSENGER } from "constants/urls"
 
+import VideoIntro from "./components/VideoIntro"
+import CourseIntroduction from "./components/CourseIntroduction"
+import CourseRoute from "./components/CourseRoute"
 import * as Styled from "./OnlineCourse.styled"
 
 function OnlineCourse(props) {
@@ -92,6 +95,9 @@ function OnlineCourse(props) {
           </Styled.CTABlock>
         </Styled.IntroLeft>
       </Styled.Header>
+      <VideoIntro />
+      <CourseIntroduction />
+      <CourseRoute />
     </Styled.Container>
   )
 }
@@ -309,7 +315,6 @@ function animeCta() {
     scale: [0, 1],
     opacity: [0, 1],
     translateZ: 0,
-    // easing: "easeInOutExpo",
     delay: 1500,
     duration: 600,
   })
