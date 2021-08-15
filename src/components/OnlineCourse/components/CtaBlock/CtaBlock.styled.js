@@ -8,7 +8,7 @@ export const Section = styled.section`
 `
 
 export const Container = styled.div`
-  padding: 64px 0;
+  padding: 64px 0 128px;
   ${tabletUp`
     display: flex;
     justify-content: space-between;
@@ -32,6 +32,7 @@ export const H3 = styled.h3`
   text-align: center;
   color: #ffffff;
   margin: 0 0 12px 0;
+  opacity: 0;
   ${desktopUp`
     font-size: 30px;
     margin-bottom: 24px;
@@ -46,6 +47,10 @@ export const H2 = styled.h2`
   text-align: center;
   color: #ffffff;
   margin: 0 0 12px 0;
+  strong {
+    opacity: 0;
+    display: inline-block;
+  }
   ${desktopUp`
     font-size: 40px;
     margin-bottom: 32px;
@@ -70,12 +75,14 @@ export const Price = styled.span`
   }
   strong {
     font-weight: 600;
+    display: inline-block;
   }
 `
 
 export const PhotoshopBox = styled.div`
   width: 80%;
   margin: 64px auto 0;
+  opacity: 0;
   img {
     width: 100%;
   }
@@ -84,6 +91,7 @@ export const PhotoshopBox = styled.div`
 export const PhotoshopBoxShadow = styled.div`
   transform: scale(1.3);
   margin: 24px auto 0;
+  opacity: 0;
   img {
     width: 100%;
   }

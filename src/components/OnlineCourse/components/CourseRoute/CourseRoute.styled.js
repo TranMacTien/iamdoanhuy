@@ -9,6 +9,10 @@ export const Container = styled.div`
   box-sizing: border-box;
   background: url("${BackgroundMobile1}") bottom center no-repeat;
   background-size: 100% auto;
+  
+  ${desktopUp`
+    padding-bottom: 128px;
+  `}
 `
 
 export const Section = styled.div`

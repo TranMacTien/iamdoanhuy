@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import useCollapse from "react-collapsed"
+import anime from "animejs"
 
 import IconArrow from "images/icon-circle-arrow-down.svg"
 
@@ -10,19 +11,39 @@ function CourseRouteItem({ item, index }) {
     duration: 200,
     defaultExpanded: true,
   })
+  const containerRef = useRef()
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.intersectionRatio >= 0.7) {
+            anime({
+              targets: containerRef.current,
+              duration: 1000,
+              opacity: [0, 1],
+              translateX: [index % 2 !== 0 ? 40 : -40, 0],
+              easing: "easeOutQuart",
+            })
+            observer.disconnect()
+          }
+        })
+      },
+      {
+        threshold: 0.7,
+      }
+    )
+    observer.observe(containerRef.current)
+  }, [])
 
   return (
     <li>
-      <Styled.Item>
+      <Styled.Item ref={containerRef} style={{ opacity: 0 }}>
         <Styled.TitleContainer {...getToggleProps()}>
           <Styled.Title>
             {index + 1}. {item.title}
           </Styled.Title>
-          <Styled.Arrow
-            src={IconArrow}
-            alt="arrow"
-            isExpanded={isExpanded}
-          />
+          <Styled.Arrow src={IconArrow} alt="arrow" isExpanded={isExpanded} />
         </Styled.TitleContainer>
         <div {...getCollapseProps()}>
           <Styled.SubList>

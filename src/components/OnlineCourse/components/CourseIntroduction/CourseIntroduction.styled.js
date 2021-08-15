@@ -108,6 +108,13 @@ export const GroupFirst = styled(Group)`
 `
 
 export const GroupTextWrapper = styled.div`
+  position: relative;
+  z-index: 2;
+  .intro-text-1,
+  .intro-text-2,
+  .intro-text-3 {
+    opacity: 0;
+  }
   ${tabletUp`
     order: ${props => props.order || 1};
     margin-right: ${props => props.gap?.md || 0}px;
@@ -126,6 +133,7 @@ export const GroupThird = styled(Group)`
 
 export const GroupWrapper1 = styled.div`
   padding: 100px 0 80px;
+  position: relative;
   ${tabletUp`
     order: 1;
     padding: 0;
@@ -144,6 +152,7 @@ export const GroupWrapper1 = styled.div`
 
 export const GroupWrapper2 = styled.div`
   padding: 80px 0 60px;
+  position: relative;
   ${tabletUp`
     order: 2;
     padding: 0;
@@ -152,6 +161,7 @@ export const GroupWrapper2 = styled.div`
 
 export const GroupWrapper3 = styled.div`
   padding: 80px 0 60px;
+  position: relative;
   ${tabletUp`
     order: 1;
     padding: 0;
@@ -257,4 +267,17 @@ export const PosterRonaldo = styled.div`
   padding-bottom: 30%;
   position: relative;
   z-index: 2;
+`
+
+export const Lighten1 = styled.div`
+  position: absolute;
+  top: 45%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%) scale(1.3);
+  user-select: none;
+  pointer-events: none;
+  img {
+    width: 100%;
+  }
 `
