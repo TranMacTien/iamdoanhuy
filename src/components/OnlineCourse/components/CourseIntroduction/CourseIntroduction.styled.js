@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components"
 import media from "styled-media-query"
 
-import { tabletUp } from "utils/media"
+import { desktopUp, tabletUp } from "utils/media"
 import { ButtonBase } from "components/Common.styled"
 import BackgroundMobile1 from "images/background-wave-mobile.svg"
 import BackgroundMobile2 from "images/background-wave-mobile-2.svg"
@@ -130,6 +130,16 @@ export const GroupWrapper1 = styled.div`
     order: 1;
     padding: 0;
   `}
+
+  ${desktopUp`
+    display: flex;
+    flex-wrap: wrap;
+    padding-right: 76px;
+    gap: 24px;
+    &>* {
+      width: calc(50% - 24px);
+    }
+  `}
 `
 
 export const GroupWrapper2 = styled.div`
@@ -153,6 +163,21 @@ export const ImageGroupFirst = styled.div`
   ${tabletUp`
     max-width: 80%;
   `}
+  ${desktopUp`
+    margin-bottom: 48px;
+    ${props =>
+      props.secondary &&
+      css`
+        transform: translateY(120px);
+      `}
+  `}
+  ${media.lessThan("large")`
+    ${props =>
+      props.secondary &&
+      css`
+        display: none;
+      `}
+  `}
   img {
     width: 100%;
     overflow: hidden;
@@ -174,10 +199,18 @@ export const PosterChi = styled.div`
   top: -10%;
   left: 40%;
   width: 60%;
+  ${desktopUp`
+    width: 100%;
+    position: static;
+  `}
 `
 
 export const PosterBMT = styled.div`
   width: 60%;
+  ${desktopUp`
+    width: 100%;
+    margin-bottom: 24px;
+  `}
 `
 
 export const PosterSonTung = styled.div`
