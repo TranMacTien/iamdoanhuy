@@ -2,7 +2,12 @@ import styled from "styled-components"
 
 import { desktopUp, tabletUp } from "utils/media"
 
-export const Container = styled.section`
+export const Section = styled.section`
+  max-width: 1200px;
+  margin: 0 auto;
+`
+
+export const Container = styled.div`
   padding: 64px 0;
   ${tabletUp`
     display: flex;
@@ -29,6 +34,7 @@ export const H3 = styled.h3`
   margin: 0 0 12px 0;
   ${desktopUp`
     font-size: 30px;
+    margin-bottom: 24px;
   `}
 `
 
@@ -42,6 +48,7 @@ export const H2 = styled.h2`
   margin: 0 0 12px 0;
   ${desktopUp`
     font-size: 40px;
+    margin-bottom: 32px;
   `}
 `
 

@@ -17,32 +17,30 @@ function CourseRoute(props) {
     : data.slice(6, data.length)
   return (
     <Styled.Container>
-      <Styled.MainList>
-        <div>
-          {dataLeft.map((item, index) => (
-            <Styled.CourseRouteItemWrapper
-              key={index}
-            >
-              <CourseRouteItem
-                item={item}
-                index={isTabletUp ? (index + 1) * 2 - 2 : index}
-              />
-            </Styled.CourseRouteItemWrapper>
-          ))}
-        </div>
-        <div>
-          {dataRight.map((item, index) => (
-            <Styled.CourseRouteItemWrapper
-              key={index}
-            >
-              <CourseRouteItem
-                item={item}
-                index={isTabletUp ? (index + 1) * 2 - 1 : index + 6}
-              />
-            </Styled.CourseRouteItemWrapper>
-          ))}
-        </div>
-      </Styled.MainList>
+      <Styled.Section>
+        <Styled.MainList>
+          <div>
+            {dataLeft.map((item, index) => (
+              <Styled.CourseRouteItemWrapper key={index}>
+                <CourseRouteItem
+                  item={item}
+                  index={isTabletUp ? (index + 1) * 2 - 2 : index}
+                />
+              </Styled.CourseRouteItemWrapper>
+            ))}
+          </div>
+          <div>
+            {dataRight.map((item, index) => (
+              <Styled.CourseRouteItemWrapper key={index}>
+                <CourseRouteItem
+                  item={item}
+                  index={isTabletUp ? (index + 1) * 2 - 1 : index + 6}
+                />
+              </Styled.CourseRouteItemWrapper>
+            ))}
+          </div>
+        </Styled.MainList>
+      </Styled.Section>
     </Styled.Container>
   )
 }

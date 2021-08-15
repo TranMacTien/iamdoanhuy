@@ -94,7 +94,9 @@ export const Group = styled.div`
     padding: 40px 24px 80px;
     display: flex;
     align-items: center;
+    justify-content: center;
     &>* {
+      max-width: 600px;
       width: 50%;
     }
   `}

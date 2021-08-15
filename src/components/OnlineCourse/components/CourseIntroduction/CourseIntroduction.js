@@ -13,38 +13,38 @@ import * as Styled from "./CourseIntroduction.styled"
 
 function CourseIntroduction(props) {
   return (
-    <Styled.Section>
+    <div>
       <Styled.GroupFirst>
-        <Styled.GroupTextWrapper order={2}>
-          <Styled.Title>TỔNG QUAN KHOÁ HỌC</Styled.Title>
-          <Styled.SubTitle>
-            Học Photoshop cần có một lộ trình rõ&nbsp;ràng
-          </Styled.SubTitle>
-          <Styled.Desc>
-            Học Photoshop trên mạng không hề khó. Tuy nhiên vấn đề lớn nhất đó
-            chính là không có một lộ trình học rõ ràng, lan man khiến những
-            người học cảm thấy Photoshop vô cùng phức tạp, đặc biệt là người
-            mới.
-          </Styled.Desc>
-          <Styled.Desc>
-            Khoá học này chúng ta sẽ cùng chinh phục những công cụ cần thiết
-            nhất của Photoshop, ứng dụng thực hành từng công cụ và mục tiêu kết
-            thúc khoá học các bạn sẽ tạo ra được POSTER cho riêng mình.
-          </Styled.Desc>
-          <Styled.CtaButtonWrapper>
-            <Styled.CtaButton>ĐĂNG KÍ NGAY</Styled.CtaButton>
-          </Styled.CtaButtonWrapper>
-        </Styled.GroupTextWrapper>
-        <Styled.GroupWrapper1>
-          <Styled.ImageGroupFirst>
-            <Styled.PosterBMT>
-              <img src={ImagePosterBMT} alt="Huy Poster" />
-            </Styled.PosterBMT>
-            <Styled.PosterChi>
-              <img src={ImagePosterChi} alt="Huy Poster" />
-            </Styled.PosterChi>
-          </Styled.ImageGroupFirst>
-        </Styled.GroupWrapper1>
+          <Styled.GroupTextWrapper order={2}>
+            <Styled.Title>TỔNG QUAN KHOÁ HỌC</Styled.Title>
+            <Styled.SubTitle>
+              Học Photoshop cần có một lộ trình rõ&nbsp;ràng
+            </Styled.SubTitle>
+            <Styled.Desc>
+              Học Photoshop trên mạng không hề khó. Tuy nhiên vấn đề lớn nhất đó
+              chính là không có một lộ trình học rõ ràng, lan man khiến những
+              người học cảm thấy Photoshop vô cùng phức tạp, đặc biệt là người
+              mới.
+            </Styled.Desc>
+            <Styled.Desc>
+              Khoá học này chúng ta sẽ cùng chinh phục những công cụ cần thiết
+              nhất của Photoshop, ứng dụng thực hành từng công cụ và mục tiêu
+              kết thúc khoá học các bạn sẽ tạo ra được POSTER cho riêng mình.
+            </Styled.Desc>
+            <Styled.CtaButtonWrapper>
+              <Styled.CtaButton>ĐĂNG KÍ NGAY</Styled.CtaButton>
+            </Styled.CtaButtonWrapper>
+          </Styled.GroupTextWrapper>
+          <Styled.GroupWrapper1>
+            <Styled.ImageGroupFirst>
+              <Styled.PosterBMT>
+                <img src={ImagePosterBMT} alt="Huy Poster" />
+              </Styled.PosterBMT>
+              <Styled.PosterChi>
+                <img src={ImagePosterChi} alt="Huy Poster" />
+              </Styled.PosterChi>
+            </Styled.ImageGroupFirst>
+          </Styled.GroupWrapper1>
       </Styled.GroupFirst>
       <Styled.GroupSecond>
         <Styled.GroupTextWrapper order={0} gap={{ md: 24 }}>
@@ -93,7 +93,7 @@ function CourseIntroduction(props) {
             Với kinh nghiệm giảng dạy môn Photoshop và làm việc trong ngành
             thiết kế, ở khoá học này, Huy chắt lọc mọi thứ từ kiến thức đến thực
             hành một cách ngắn gọn, dễ hiểu nhất để các bạn có thể học và làm
-            một cách dễ dàng.
+            một cách dễ&nbsp;dàng.
           </Styled.Desc>
           <Styled.Desc>
             Ở đây Huy không chỉ là bán một khoá học, mà Huy muốn giúp tất cả các
@@ -119,7 +119,7 @@ function CourseIntroduction(props) {
           </Styled.ImageGroupThird>
         </Styled.GroupWrapper3>
       </Styled.GroupThird>
-    </Styled.Section>
+    </div>
   )
 }
 
