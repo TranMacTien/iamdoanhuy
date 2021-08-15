@@ -13,7 +13,7 @@ function BlockQuote(props) {
           <Styled.QuoteWrapper>
             <Styled.QuoteContent>
               Ý tưởng là thứ mà chúng ta luôn có, nó có thể đến một cách vô tình
-              hay là do bạn vắc óc suy nghĩ, nhưng nếu bạn chỉ dừng lại ở việc
+              hay là do bạn vắt óc suy nghĩ, nhưng nếu bạn chỉ dừng lại ở việc
               chỉ tưởng tượng mà không đưa nó ra bằng hình ảnh thì thật là uổng
               phí. Vậy nên...
             </Styled.QuoteContent>
