@@ -6,7 +6,7 @@ import { ButtonBase } from "components/Common.styled"
 import { Fonts, Colors } from "@constants"
 
 const TitleStyles = css`
-  font-family: ${Fonts.Secondary};
+  font-family: ${Fonts.Primary};
   font-style: normal;
   font-weight: 800;
   color: ${Colors.TextPrimary};
@@ -88,7 +88,7 @@ export const CourseItem = styled.li`
 `
 
 export const CourseTitle = styled.h3`
-  font-family: ${Fonts.Secondary};
+  font-family: ${Fonts.Primary};
   font-style: normal;
   font-weight: 800;
   font-size: 22px;
@@ -113,7 +113,7 @@ export const CourseText = styled.p`
 `
 
 export const Pricing = styled.p`
-  font-family: ${Fonts.Secondary};
+  font-family: ${Fonts.Primary};
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
@@ -133,7 +133,7 @@ export const Overview = styled.section`
   margin-bottom: 24px;
 `
 export const OverviewTitle = styled.h3`
-  font-family: ${Fonts.Secondary};
+  font-family: ${Fonts.Primary};
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
@@ -186,7 +186,7 @@ export const LearningPath = styled.section`
 `
 
 export const LearningPathTitle = styled.h3`
-  font-family: ${Fonts.Secondary};
+  font-family: ${Fonts.Primary};
   font-style: normal;
   font-weight: 700;
   font-size: 24px;

@@ -29,7 +29,7 @@ export const Title = styled.h2`
   margin: 48px 0 0 0;
   text-align: center;
   display: ${props => props.fullscreen && "none"};
-  font-family: ${Fonts.Secondary};
+  font-family: ${Fonts.Primary};
 `
 
 export const ContentContainer = styled.div``

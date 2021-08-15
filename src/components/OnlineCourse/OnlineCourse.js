@@ -16,6 +16,7 @@ import { MESSENGER } from "constants/urls"
 import VideoIntro from "./components/VideoIntro"
 import CourseIntroduction from "./components/CourseIntroduction"
 import CourseRoute from "./components/CourseRoute"
+import CtaBlock from "./components/CtaBlock"
 import * as Styled from "./OnlineCourse.styled"
 
 function OnlineCourse(props) {
@@ -98,6 +99,7 @@ function OnlineCourse(props) {
       <VideoIntro />
       <CourseIntroduction />
       <CourseRoute />
+      <CtaBlock />
     </Styled.Container>
   )
 }

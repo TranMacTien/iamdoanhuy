@@ -1,6 +1,5 @@
 import styled from "styled-components"
 
-import IconPlay from "images/icon-play.svg"
 import BackgroundMobile1 from "images/background-wave-mobile.svg"
 import { Colors } from "@constants"
 
@@ -65,18 +64,7 @@ export const SubItemTitle = styled.h4`
   color: ${Colors.Primary};
   font-weight: normal;
   margin: 0;
-  padding-left: 20px;
   position: relative;
-  &:after {
-    content: "";
-    display: block;
-    width: 12px;
-    height: 12px;
-    position: absolute;
-    top: 2px;
-    left: 0;
-    background: url("${IconPlay}") center/cover no-repeat;
-  }
 `
 
 export const Time = styled.span`

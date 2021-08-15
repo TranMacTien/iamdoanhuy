@@ -48,7 +48,7 @@ export const StyledMenuContainer = styled.div`
       text-decoration: none;
       font-size: 16px;
       font-weight: 600;
-      font-family: ${Fonts.Secondary};
+      font-family: ${Fonts.Primary};
       position: relative;
       &.active {
       }

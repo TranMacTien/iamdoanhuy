@@ -55,7 +55,7 @@ export const ButtonBase = styled.button`
   color: ${props => ButtonColor[props.type] || "black"};
   font-size: ${props => ButtonFontSize[props.size] || 18}px;
   font-weight: 800;
-  font-family: ${Fonts.Secondary};
+  font-family: ${Fonts.Primary};
   border-radius: 4px;
   border: 1px solid ${props => ButtonBorder[props.type] || Colors.Secondary};
   height: ${props => ButtonHeight[props.size] || 48}px;

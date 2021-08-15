@@ -51,7 +51,7 @@ export const QuoteContent = styled.p`
 `
 
 export const QuoteCta = styled.p`
-  font-family: ${Fonts.Secondary};
+  font-family: ${Fonts.Primary};
   font-style: normal;
   font-weight: bold;
   line-height: 1.25;

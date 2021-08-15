@@ -5,7 +5,7 @@ import { rgba } from "polished"
 import { Fonts, Colors } from "@constants"
 
 export const Title = styled.h1`
-  font-family: ${Fonts.Secondary};
+  font-family: ${Fonts.Primary};
   font-style: normal;
   font-weight: 800;
   color: ${Colors.TextPrimary};

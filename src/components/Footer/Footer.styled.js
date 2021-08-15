@@ -56,7 +56,7 @@ export const LogoImage = styled.img`
 `
 
 export const FooterTitle = styled.h2`
-  font-family: ${Fonts.Secondary};
+  font-family: ${Fonts.Primary};
   font-style: normal;
   font-weight: 700;
   line-height: 1.25;

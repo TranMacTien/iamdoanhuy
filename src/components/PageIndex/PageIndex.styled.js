@@ -77,7 +77,7 @@ export const IntroSocialList = styled.ul`
 export const IntroSlogan = styled.h2`
   margin: 24px 0;
   span {
-    font-family: ${Fonts.Secondary};
+    font-family: ${Fonts.Primary};
     font-style: normal;
     font-weight: 800;
     position: relative;
@@ -143,7 +143,7 @@ export const HomeBlockSecondaryImage = styled.img`
 `
 
 export const HomeBlockSecondaryTitle = styled.h2`
-  font-family: ${Fonts.Secondary};
+  font-family: ${Fonts.Primary};
   font-style: normal;
   font-weight: 800;
   line-height: 1.25;

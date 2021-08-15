@@ -21,6 +21,7 @@ const getPartialSize = props => {
 
 export const Container = styled.div`
   background: ${Colors.Haity};
+  overflow: hidden;
   img {
     display: block;
   }
@@ -159,7 +160,7 @@ export const CTABlock = styled.div`
 export const Pricing = styled.p`
   font-size: 18px;
   color: white;
-  font-family: ${Fonts.Secondary};
+  font-family: ${Fonts.Primary};
   del {
     font-weight: 300;
     opacity: 0.6;

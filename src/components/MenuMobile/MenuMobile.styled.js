@@ -56,7 +56,7 @@ export const MenuList = styled.ul`
 
 export const MenuItem = styled.li`
   a {
-    font-family: ${Fonts.Secondary};
+    font-family: ${Fonts.Primary};
     font-weight: 700;
     color: ${Colors.TextPrimary};
     text-decoration: none;

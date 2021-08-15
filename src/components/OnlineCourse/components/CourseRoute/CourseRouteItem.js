@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import useCollapse from "react-collapsed"
 
 import IconArrow from "images/icon-circle-arrow-down.svg"
-import IconPlay from 'images/icon-play.svg'
+
 import * as Styled from "./CourseRoute.styled"
 
 function CourseRouteItem({ item, index }) {
