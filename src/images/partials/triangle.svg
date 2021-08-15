@@ -1,14 +1,1 @@
-<svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g filter="url(#filter0_b)">
-<path d="M3.22192 3.47527L28.3688 10.1059L7.92492 29.0564L3.22192 3.47527Z" fill="white" fill-opacity="0.0792572"/>
-<path d="M3.6043 2.02471C3.10785 1.89381 2.57893 2.02598 2.20237 2.37503C1.82581 2.72409 1.65392 3.24153 1.74677 3.74657L6.44976 29.3277C6.5487 29.8659 6.9328 30.3075 7.45202 30.4801C7.97123 30.6526 8.54319 30.5287 8.94447 30.1567L29.3883 11.2061C29.7896 10.8342 29.9565 10.2732 29.8239 9.7423C29.6913 9.21141 29.2802 8.79487 28.7511 8.65537L3.6043 2.02471Z" stroke="#6357F6" stroke-width="3" stroke-linejoin="round"/>
-</g>
-<defs>
-<filter id="filter0_b" x="-7.93268" y="-7.67987" width="47.4562" height="47.8914" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feGaussianBlur in="BackgroundImage" stdDeviation="4.07742"/>
-<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur" result="shape"/>
-</filter>
-</defs>
-</svg>
+<svg fill="none" height="33" viewBox="0 0 32 33" width="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><filter id="a" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse" height="47.8914" width="47.4562" x="-7.93268" y="-7.67987"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feGaussianBlur in="BackgroundImage" stdDeviation="4.07742"/><feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur"/><feBlend in="SourceGraphic" in2="effect1_backgroundBlur" mode="normal" result="shape"/></filter><g filter="url(#a)"><path d="m3.22192 3.47527 25.14688 6.63063-20.44388 18.9505z" fill="#fff" fill-opacity=".079257"/><path d="m3.6043 2.02471c-.49645-.1309-1.02537.00127-1.40193.35032-.37656.34906-.54845.8665-.4556 1.37154l4.70299 25.58113c.09894.5382.48304.9798 1.00226 1.1524.51921.1725 1.09117.0486 1.49245-.3234l20.44383-18.9506c.4013-.3719.5682-.9329.4356-1.4638-.1326-.53089-.5437-.94743-1.0728-1.08693z" stroke="#6357f6" stroke-linejoin="round" stroke-width="3"/></g></svg>
