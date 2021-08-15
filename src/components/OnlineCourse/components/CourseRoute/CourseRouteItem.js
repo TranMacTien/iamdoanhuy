@@ -3,6 +3,7 @@ import useCollapse from "react-collapsed"
 import anime from "animejs"
 
 import IconArrow from "images/icon-circle-arrow-down.svg"
+import { observeAnimation } from "utils/observeAnimation"
 
 import * as Styled from "./CourseRoute.styled"
 
@@ -14,26 +15,15 @@ function CourseRouteItem({ item, index }) {
   const containerRef = useRef()
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (entry.intersectionRatio >= 0.7) {
-            anime({
-              targets: containerRef.current,
-              duration: 1000,
-              opacity: [0, 1],
-              translateX: [index % 2 !== 0 ? 40 : -40, 0],
-              easing: "easeOutQuart",
-            })
-            observer.disconnect()
-          }
-        })
-      },
-      {
-        threshold: 0.7,
-      }
-    )
-    observer.observe(containerRef.current)
+    observeAnimation(() => {
+      anime({
+        targets: containerRef.current,
+        duration: 1000,
+        opacity: [0, 1],
+        translateX: [index % 2 !== 0 ? 40 : -40, 0],
+        easing: "easeOutQuart",
+      })
+    }, [containerRef.current])
   }, [])
 
   return (
