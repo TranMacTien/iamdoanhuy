@@ -2,6 +2,7 @@ import styled from "styled-components"
 
 import BackgroundMobile1 from "images/background-wave-mobile.svg"
 import { Colors } from "@constants"
+import { tabletUp } from 'utils/media'
 
 export const Container = styled.div`
   padding: 24px 24px 64px;
@@ -18,6 +19,18 @@ export const MainList = styled.ul`
   padding: 0;
   margin: 0;
   list-style: none;
+  ${tabletUp`
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -12px;
+    &>* {
+      padding: 12px;
+      width: 50%;
+    }
+    &>*:last-child {
+      transform: translateY(64px);
+    }
+  `}
 `
 
 export const Title = styled.h3`
@@ -79,4 +92,11 @@ export const Arrow = styled.img`
   width: 16px;
   transition: all 0.2s ease;
   transform: rotate(${props => (props.isExpanded ? -180 : 0)}deg);
+`
+
+export const CourseRouteItemWrapper = styled.div`
+  margin-bottom: 16px;
+  ${tabletUp`
+    margin-bottom: 24px;
+  `}
 `

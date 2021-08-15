@@ -1,5 +1,7 @@
 import styled, { css } from "styled-components"
+import media from "styled-media-query"
 
+import { tabletUp } from "utils/media"
 import { ButtonBase } from "components/Common.styled"
 import BackgroundMobile1 from "images/background-wave-mobile.svg"
 import BackgroundMobile2 from "images/background-wave-mobile-2.svg"
@@ -17,16 +19,23 @@ export const Title = styled.h2`
   line-height: 150%;
   margin: 0 0 8px 0;
   text-align: center;
+  ${tabletUp`
+    text-align: left;
+  `}
 `
 export const SubTitle = styled.h3`
   color: white;
   font-weight: bold;
-  font-size: 27px;
+  font-size: 28px;
   line-height: 150%;
   text-align: center;
   padding-bottom: 16px;
   margin: 0 0 16px 0;
   position: relative;
+  ${tabletUp`
+    text-align: left;
+    font-size: 32px;
+  `}
   &:after {
     content: "";
     display: block;
@@ -37,6 +46,10 @@ export const SubTitle = styled.h3`
     margin-left: -32px;
     height: 1px;
     background: #b93975;
+    ${tabletUp`
+      left: 0;
+      margin-left: 0;
+    `}
   }
 `
 
@@ -46,10 +59,21 @@ export const Text = css`
   font-size: 16px;
   line-height: 150%;
   margin: 0 0 1rem 0;
+  ${tabletUp`
+    font-size: 18px;
+  `}
 `
 
 export const Desc = styled.p`
   ${Text}
+`
+
+export const CtaButtonWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  ${tabletUp`
+    justify-content: flex-start;
+  `}
 `
 
 export const CtaButton = styled(ButtonBase)`
@@ -66,11 +90,26 @@ export const List = styled.ul`
 
 export const Group = styled.div`
   padding: 0 24px;
+  ${tabletUp`
+    padding: 40px 24px 80px;
+    display: flex;
+    align-items: center;
+    &>* {
+      width: 50%;
+    }
+  `}
 `
 
 export const GroupFirst = styled(Group)`
   background: url("${BackgroundMobile1}") bottom center no-repeat;
   background-size: 100% auto;
+`
+
+export const GroupTextWrapper = styled.div`
+  ${tabletUp`
+    order: ${props => props.order || 1};
+    margin-right: ${props => props.gap?.md || 0}px;
+  `}
 `
 
 export const GroupSecond = styled(Group)`
@@ -85,18 +124,33 @@ export const GroupThird = styled(Group)`
 
 export const GroupWrapper1 = styled.div`
   padding: 100px 0 80px;
+  ${tabletUp`
+    order: 1;
+    padding: 0;
+  `}
 `
 
 export const GroupWrapper2 = styled.div`
   padding: 80px 0 60px;
+  ${tabletUp`
+    order: 2;
+    padding: 0;
+  `}
 `
 
 export const GroupWrapper3 = styled.div`
   padding: 80px 0 60px;
+  ${tabletUp`
+    order: 1;
+    padding: 0;
+  `}
 `
 
 export const ImageGroupFirst = styled.div`
   position: relative;
+  ${tabletUp`
+    max-width: 80%;
+  `}
   img {
     width: 100%;
     overflow: hidden;
@@ -105,7 +159,11 @@ export const ImageGroupFirst = styled.div`
   }
 `
 
-export const ImageGroupSecond = styled(ImageGroupFirst)``
+export const ImageGroupSecond = styled(ImageGroupFirst)`
+  ${tabletUp`
+    max-width: 100%;
+  `}
+`
 
 export const ImageGroupThird = styled(ImageGroupFirst)``
 
