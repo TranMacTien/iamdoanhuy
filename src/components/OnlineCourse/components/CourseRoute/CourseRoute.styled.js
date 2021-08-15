@@ -1,7 +1,13 @@
 import styled from "styled-components"
 
-import IconPlay from 'images/icon-play.svg'
+import IconPlay from "images/icon-play.svg"
+import BackgroundMobile1 from "images/background-wave-mobile.svg"
 import { Colors } from "@constants"
+
+export const Container = styled.div`
+  padding: 24px 24px 64px;
+  background: url("${BackgroundMobile1}") bottom center no-repeat;
+`
 
 export const Item = styled.div`
   background-color: white;
@@ -25,12 +31,14 @@ export const Title = styled.h3`
 `
 
 export const TitleContainer = styled.div`
-  background: linear-gradient(90deg, #6a58ef 1.21%, #e06073 98.69%);
+  background: linear-gradient(to right, #6a58ef 0%, #e06073 100%);
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.26);
   padding: 12px 24px;
   display: flex;
   justify-content: space-between;
   cursor: pointer;
+  -webkit-appearance: none;
+  outline: none;
   img {
     flex-shrink: 0;
   }
