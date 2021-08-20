@@ -13,7 +13,7 @@ import ImagePhotoshopGradient from "images/partials/photoshop.png"
 import { ButtonBase } from "components/Common.styled"
 import { MESSENGER } from "constants/urls"
 
-import VideoIntro from "./components/VideoIntro"
+// import VideoIntro from "./components/VideoIntro"
 import CourseIntroduction from "./components/CourseIntroduction"
 import CourseRoute from "./components/CourseRoute"
 import CtaBlock from "./components/CtaBlock"
@@ -96,7 +96,7 @@ function OnlineCourse(props) {
           </Styled.CTABlock>
         </Styled.IntroLeft>
       </Styled.Header>
-      <VideoIntro />
+      {/* <VideoIntro /> */}
       <CourseIntroduction />
       <CourseRoute />
       <CtaBlock />
