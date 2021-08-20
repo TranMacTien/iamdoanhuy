@@ -15,6 +15,7 @@ import ImageLighten from "images/partials/lighten-1.svg"
 import ImageLighten2 from "images/partials/lighten-2.svg"
 import ImageLighten3 from "images/partials/lighten-3.svg"
 import { observeAnimation } from "utils/observeAnimation"
+import { MESSENGER } from "constants/urls"
 
 import * as Styled from "./CourseIntroduction.styled"
 
@@ -49,7 +50,14 @@ function CourseIntroduction(props) {
             thúc khoá học các bạn sẽ tạo ra được POSTER cho riêng mình.
           </Styled.Desc>
           <Styled.CtaButtonWrapper className="intro-text-1">
-            <Styled.CtaButton>ĐĂNG KÍ NGAY</Styled.CtaButton>
+            <Styled.CtaButton
+              as="a"
+              href={MESSENGER}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              ĐĂNG KÍ NGAY
+            </Styled.CtaButton>
           </Styled.CtaButtonWrapper>
         </Styled.GroupTextWrapper>
         <Styled.GroupWrapper1>
@@ -97,7 +105,14 @@ function CourseIntroduction(props) {
             </li>
           </Styled.List>
           <Styled.CtaButtonWrapper className="intro-text-2">
-            <Styled.CtaButton>ĐĂNG KÍ NGAY</Styled.CtaButton>
+            <Styled.CtaButton
+              as="a"
+              href={MESSENGER}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              ĐĂNG KÍ NGAY
+            </Styled.CtaButton>
           </Styled.CtaButtonWrapper>
         </Styled.GroupTextWrapper>
         <Styled.GroupWrapper2>
@@ -120,7 +135,9 @@ function CourseIntroduction(props) {
 
       <Styled.GroupThird ref={section3}>
         <Styled.GroupTextWrapper order={2}>
-          <Styled.Title className="intro-text-3">GIÁO TRÌNH KHOÁ HỌC</Styled.Title>
+          <Styled.Title className="intro-text-3">
+            GIÁO TRÌNH KHOÁ HỌC
+          </Styled.Title>
           <Styled.SubTitle className="intro-text-3">
             Hơn 30 video và được hỗ trợ trực tuyến
           </Styled.SubTitle>
@@ -137,7 +154,14 @@ function CourseIntroduction(props) {
             luôn đồng hành cùng các bạn.
           </Styled.Desc>
           <Styled.CtaButtonWrapper className="intro-text-3">
-            <Styled.CtaButton>ĐĂNG KÍ NGAY</Styled.CtaButton>
+            <Styled.CtaButton
+              as="a"
+              href={MESSENGER}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              ĐĂNG KÍ NGAY
+            </Styled.CtaButton>
           </Styled.CtaButtonWrapper>
         </Styled.GroupTextWrapper>
         <Styled.GroupWrapper3>

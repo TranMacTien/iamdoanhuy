@@ -5,6 +5,7 @@ import ImageBox from "images/photoshop-box.png"
 import ImageBoxShadow from "images/photoshop-box-shadow.png"
 import { ButtonBase, Center } from "components/Common.styled"
 import { observeAnimation } from "utils/observeAnimation"
+import { MESSENGER } from "constants/urls"
 import * as Styled from "./CtaBlock.styled"
 
 function CtaBlock(props) {
@@ -38,7 +39,14 @@ function CtaBlock(props) {
               </span>
             </Styled.Price>
             <Center>
-              <ButtonBase>ĐĂNG KÍ NGAY</ButtonBase>
+              <ButtonBase
+                as="a"
+                href={MESSENGER}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                ĐĂNG KÍ NGAY
+              </ButtonBase>
             </Center>
           </div>
         </div>

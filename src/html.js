@@ -35,8 +35,8 @@ export default function HTML(props) {
             chatbox.setAttribute("attribution", "biz_inbox");
             window.fbAsyncInit = function() {
               FB.init({
-                xfbml            : true,
-                version          : 'v11.0'
+                xfbml: true,
+                version: 'v11.0'
               });
             };
       
