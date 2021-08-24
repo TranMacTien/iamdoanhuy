@@ -96,7 +96,7 @@ function OnlineCourse(props) {
           </Styled.CTABlock>
         </Styled.IntroLeft>
       </Styled.Header>
-      {/* <VideoIntro /> */}
+      <VideoIntro />
       <CourseIntroduction />
       <CourseRoute />
       <CtaBlock />
