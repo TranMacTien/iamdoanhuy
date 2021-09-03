@@ -56,8 +56,8 @@ function Footer(props) {
               <a href="tel: 0968 573 574">Số điện thoại: 0968 573 574</a>
             </Styled.FooterListItem>
             <Styled.FooterListItem>
-              <a href="mailto: huydoan9825@gmail.com">
-                Gmail: huydoan9825@gmail.com
+              <a href="mailto: huyposter.ps@gmail.com">
+                Gmail: huyposter.ps@gmail.com
               </a>
             </Styled.FooterListItem>
           </Styled.FooterList>
