@@ -41,18 +41,15 @@ function PageIndex(props) {
             <p>
               POSTER là một trong những ấn phẩm truyền thông phổ biến nhất. Từ
               phim ảnh, event, quảng bá sản phẩm,... POSTER đều được sử dụng
-              linh hoạt dù là online hay offline.
-            </p>
-            <p>
-              Photoshop là một trong những phần mềm giúp bạn có thể tiếp cận và
-              tạo ra được những sản phẩm poster từ cơ bản đến chuyên nghiệp một
-              cách nhanh nhất.
+              linh hoạt dù là online hay offline. Photoshop là một trong những
+              phần mềm giúp bạn có thể tiếp cận và tạo ra được những sản phẩm
+              poster từ cơ bản đến chuyên nghiệp một cách nhanh nhất.
             </p>
             <p>Dù bạn là người mới cũng không sao, hãy để Huy giúp bạn nhé !</p>
           </>
         }
         textLink="XEM CHI TIẾT"
-        to="/khoa-hoc"
+        to="/khoa-hoc-offline"
       />
       <Styled.SliderContainer>
         <Swiper
@@ -86,22 +83,23 @@ function PageIndex(props) {
         image={ImageYoutube}
         title={
           <>
-            IDEA
+            TỚ CÓ MỘT
             <br />
-            Speed video
+            KÊNH YOUTUBE
           </>
         }
         desc={
           <>
             <p>
-              Idea luôn đến từ những thứ gần gũi với chúng ta. Với anh em thì Mì
-              tôm và Nước ngọt là những thứ quá quen thuộc, không thể thiếu mỗi
-              khi chạy deadline.
+              Ở kênh youtube này, tớ sẽ đăng tải những nội dung xoay quanh về
+              thiết kế, designer và đặc biệt là design Poster.
             </p>
             <p>
-              Mời mọi người cùng xem quá trình mình tạo ra một chuỗi nhà máy sản
-              xuất Mì gói và Nước ngọt trong tương lai như thế nào nhé.
+              Mong muốn lớn nhất của Huy là tạo ra những nội dung video chất
+              lượng để phục vụ người xem. Chính vì thế mình luôn trau dồi kiến
+              thức, luyện tập thiết kế mỗi ngày.
             </p>
+            <p>Cùng đi đến kênh tớ nhé.</p>
           </>
         }
         imageWidth={600}
@@ -123,12 +121,11 @@ function PageIndex(props) {
           desc={
             <>
               <p>
-                Nhằm truyền cảm hứng và mang lại tiếng cười cho các anh em, vào
-                ngày 1/1/2021 tớ đã lập ra một kênh TikTok mang tên:{" "}
-                <em>@Iamdoanhuy</em>. Với Slogan “Yêu Đủ Thứ - Thích Design", tớ
-                muốn cho anh em thấy thiết kế Poster được áp dụng rộng rãi trên
-                mọi ngành nghề, mọi lĩnh vực trong cuộc sống này như thế nào,
-                anh em bấm vào xem nhá
+                Nhằm truyền cảm hứng cho các anh em yêu thích thiết kế, vào ngày
+                1/1/2021 tớ đã lập ra một kênh TikTok mang tên: <b><em>HUY POSTER</em></b>. Với
+                Slogan “ Yêu Đủ Thứ - Thích Design", tớ muốn cho anh em thấy
+                thiết kế Poster được áp dụng rộng rãi trên mọi ngành nghề, mọi
+                lĩnh vực trong cuộc sống này như thế nào, anh em bấm vào xem nhá.
               </p>
             </>
           }

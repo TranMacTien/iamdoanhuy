@@ -4,7 +4,7 @@ import { Parallax } from "react-parallax"
 import ImageHomeBg3 from "images/bg_khoa_hoc.jpg"
 import ImagePhotoshop from "images/photoshop_icon.png"
 import IconCheck from "images/check.svg"
-import { MESSENGER } from 'constants/urls'
+import { MESSENGER } from "constants/urls"
 import { COURSE } from "./data"
 import * as Styled from "./Course.styled"
 
@@ -56,20 +56,16 @@ function Course(props) {
               </div>
               <div>
                 {course.pricing && (
-                  <Styled.Pricing>{course.pricing}đ</Styled.Pricing>
+                  <Styled.Pricing>{course.pricing}đ/Học viên</Styled.Pricing>
                 )}
-                {index === 2 ? (
-                  <Styled.CTA disabled>TẠM NGỪNG TUYỂN SINH</Styled.CTA>
-                ) : (
-                  <Styled.CTA
-                    as="a"
-                    href={MESSENGER}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    ĐĂNG KÍ NGAY
-                  </Styled.CTA>
-                )}
+                <Styled.CTA
+                  as="a"
+                  href={MESSENGER}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  ĐĂNG KÍ NGAY
+                </Styled.CTA>
               </div>
             </Styled.CourseItem>
           ))}

@@ -26,13 +26,13 @@ function MenuMobile(props) {
             </Link>
           </Styled.MenuItem>
           <Styled.MenuItem>
-            <Link activeClassName="active" to="/khoa-hoc-online">
-              Khoá học Online
+            <Link activeClassName="active" to="/khoa-hoc-offline">
+              Khoá học Offline
             </Link>
           </Styled.MenuItem>
           <Styled.MenuItem>
-            <Link activeClassName="active" to="/khoa-hoc">
-              Khoá học
+            <Link activeClassName="active" to="/khoa-hoc-online">
+              Khoá học Online
             </Link>
           </Styled.MenuItem>
           <Styled.MenuItem>

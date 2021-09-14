@@ -42,7 +42,7 @@ function Footer(props) {
           <Styled.FooterTitle>KHOÁ HỌC</Styled.FooterTitle>
           <Styled.FooterList>
             <Styled.FooterListItem>
-              <Link to="/khoa-hoc">Khoá học</Link>
+              <Link to="/khoa-hoc-offline">Khoá học Offline</Link>
             </Styled.FooterListItem>
             <Styled.FooterListItem>
               <Link to="/khoa-hoc-online">Khoá học Online</Link>
