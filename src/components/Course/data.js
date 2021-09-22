@@ -38,7 +38,7 @@ export const COURSE = [
       "Lịch học, địa điểm linh động phù hợp với nhóm",
     ],
     form: ["Offline trực tiếp tại TP HCM", "Online trực tiếp qua Zoom"],
-    pricing: "5.000.000",
+    pricing: "1.000.000",
     background: ImageBackground3,
     overlay: "rgba(102, 43, 0, 0.87)",
   },
