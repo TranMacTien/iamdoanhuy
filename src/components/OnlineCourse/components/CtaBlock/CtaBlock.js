@@ -35,7 +35,7 @@ function CtaBlock(props) {
             <Styled.Price>
               <del>899.000 đ</del>
               <span>
-                <strong>399.000 đ</strong>
+                <strong>499.000 đ</strong>
               </span>
             </Styled.Price>
             <Center>
