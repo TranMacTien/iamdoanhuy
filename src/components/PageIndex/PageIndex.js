@@ -49,7 +49,7 @@ function PageIndex(props) {
           </>
         }
         textLink="XEM CHI TIẾT"
-        to="/khoa-hoc-offline"
+        to="/khoa-hoc-online"
       />
       <Styled.SliderContainer>
         <Swiper

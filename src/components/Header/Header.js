@@ -20,9 +20,9 @@ function Header(props) {
           <li>
             <Link activeClassName="active" to="/">Trang chủ</Link>
           </li>
-          <li>
+          {/* <li>
             <Link activeClassName="active" to="/khoa-hoc-offline">Khoá học Offline</Link>
-          </li>
+          </li> */}
           <li>
             <Link activeClassName="active" to="/khoa-hoc-online">Khoá học Online</Link>
           </li>
