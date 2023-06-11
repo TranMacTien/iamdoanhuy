@@ -88,7 +88,7 @@ function OnlineCourse(props) {
           />
           <Styled.CTABlock className="anime-pricing" style={{ opacity: 0 }}>
             <Styled.Pricing>
-              <del>899.000 đ</del> <span>499.000 đ</span>
+              <del>1.499.000 đ</del> <span>899.000 đ</span>
             </Styled.Pricing>
             <ButtonBase as="a" href={MESSENGER} target="_blank">
               ĐĂNG KÍ NGAY
