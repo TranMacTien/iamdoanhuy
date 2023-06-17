@@ -33,9 +33,9 @@ function CtaBlock(props) {
           </Styled.H2>
           <div className="cta-button-animation" style={{ opacity: 0 }}>
             <Styled.Price>
-              <del>899.000 đ</del>
+              <del>1499.000 đ</del>
               <span>
-                <strong>499.000 đ</strong>
+                <strong>899.000 đ</strong>
               </span>
             </Styled.Price>
             <Center>
